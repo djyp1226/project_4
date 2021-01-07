@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 10000;
+  z-index: 1000;
   width: 100%; }
   #header .logo {
     padding: 50px; }
@@ -15,9 +15,8 @@
   #header #nav_box {
     position: absolute;
     top: 0;
-    right: 50px;
-    width: 100vw;
-    height: 100vh; }
+    right: 0px;
+    z-index: 10000; }
     #header #nav_box .btn_box {
       width: 80px;
       height: 80px;
@@ -39,8 +38,8 @@
     #header #nav_box .dep1 {
       display: none; }
   #header #nav_box.on {
-    background: url("../images/common/nav_hover_bg.png") no-repeat;
-    background-size: cover; }
+    width: 100vw;
+    height: 100vh; }
     #header #nav_box.on .btn_box {
       width: 80px;
       height: 80px;
@@ -51,7 +50,7 @@
       border: 1px solid #000000;
       position: absolute;
       top: 50px;
-      right: 750px;
+      right: 780px;
       background: #ffffff;
       color: #000000; }
     #header #nav_box.on #gnb {
@@ -62,61 +61,58 @@
       font-size: 70px;
       position: absolute;
       top: 0;
-      right: -50px; }
+      right: 0px; }
       #header #nav_box.on #gnb .dep1 {
         display: block; }
       #header #nav_box.on #gnb li {
+        position: relative;
         height: 280px;
         width: 100%;
         line-height: 300px; }
-      #header #nav_box.on #gnb a {
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding-left: 130px;
-        color: #999A9C; }
-        #header #nav_box.on #gnb a::after {
-          content: "";
-          background: #F4EBDC;
-          width: 10px;
-          height: 100px;
+        #header #nav_box.on #gnb li a {
           display: block;
-          left: 60px;
-          position: absolute; }
-      #header #nav_box.on #gnb a:hover::after, #header #nav_box.on #gnb a:focus::after {
-        display: none; }
-      #header #nav_box.on #gnb .nav1 {
-        height: 350px;
-        line-height: 400px; }
-        #header #nav_box.on #gnb .nav1 a::after {
-          top: 150px; }
-        #header #nav_box.on #gnb .nav1 a:hover, #header #nav_box.on #gnb .nav1 a:focus {
-          z-index: 1;
-          color: #ffffff;
+          width: 100%;
+          height: 100%;
+          padding-left: 130px;
+          color: #999A9C; }
+          #header #nav_box.on #gnb li a::after {
+            content: "";
+            position: absolute;
+            top: 95px;
+            left: 60px;
+            width: 10px;
+            height: 100px;
+            background: #F4EBDC; }
+        #header #nav_box.on #gnb li a:hover, #header #nav_box.on #gnb li a:focus {
           -webkit-transition: all 1s;
           -moz-transition: all 1s;
           -o-transition: all 1s;
           transition: all 1s;
+          z-index: 1;
+          color: #ffffff; }
+          #header #nav_box.on #gnb li a:hover::after, #header #nav_box.on #gnb li a:focus::after {
+            display: none; }
+      #header #nav_box.on #gnb .nav1 {
+        height: 350px;
+        line-height: 400px; }
+        #header #nav_box.on #gnb .nav1 a {
+          background: no-repeat 0px 20px; }
+        #header #nav_box.on #gnb .nav1 a::after {
+          top: 150px; }
+        #header #nav_box.on #gnb .nav1 a:hover, #header #nav_box.on #gnb .nav1 a:focus {
           background: url("../images/common/nav_hover_1.png") 60px 20px no-repeat; }
-      #header #nav_box.on #gnb .nav2 a::after {
-        top: 450px; }
       #header #nav_box.on #gnb .nav2 a:hover, #header #nav_box.on #gnb .nav2 a:focus {
-        z-index: 1;
-        color: #ffffff;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
         background: url("../images/common/nav_hover_2.png") 60px 0px no-repeat; }
-      #header #nav_box.on #gnb .nav3 a::after {
-        top: 750px; }
       #header #nav_box.on #gnb .nav3 a:hover, #header #nav_box.on #gnb .nav3 a:focus {
-        z-index: 1;
-        color: #ffffff;
-        -webkit-transition: all 1s;
-        -moz-transition: all 1s;
-        -o-transition: all 1s;
-        transition: all 1s;
         background: url("../images/common/nav_hover_3.png") 60px 0px no-repeat; }
+    #header #nav_box.on::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 100vw;
+      height: 100vh;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0; }
 
 /*# sourceMappingURL=layout.css.map */

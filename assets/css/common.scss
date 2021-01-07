@@ -45,7 +45,7 @@
 
 // tag reset
 body, h1, h2, h3, h4, h5, p, ul, button, form{margin: 0;padding: 0;}
-h1, h2, h3, h4, h5{font-size: 100%;}
+h1, h2, h3, h4, h5{font-size: 100%; font-weight: 400;}
 ul{list-style: none;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 button{border: none;background: none;cursor: pointer;}
@@ -72,5 +72,19 @@ header, nav, section, aside, footer{display: block;}
 body{font-family: Retroica, NtSansKR; font-size: 25px; color:#ffffff; line-height: 1; font-weight: 400;background: #000000;
 *{-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}
 }
-
-.outline{color: transparent; @include text-stroke(0.1px $gray);}
+.outline{color: transparent; @include text-stroke(1px $gray); font-weight: 400;}
+.fade{
+    @include transition(all 1s);
+    opacity: 0;
+    // 수직은 translateY => 기준 아래는 +, 기준 위는 -
+    &.up{@include transform(translateY(100px));}
+    &.down{@include transform(translateY(-100px));}
+    // 수평은 translateX => 기준 오른쪽 +, 기준 왼쪽 -
+    &.left{@include transform(translateX(100px));}
+    &.right{@include transform(translateX(-100px));}
+  }
+  .fade.on{
+    opacity: 1;
+    &.up, &.down{@include transform(translateY(0px));}
+    &.left, &.right{@include transform(translateX(0px));}
+  }

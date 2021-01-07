@@ -16,8 +16,9 @@ $(document).ready(function () {
               });
             });
             $(this).removeClass('on').text('EXIT');
+            $(this).parent().parent().css('z-index', '10000');
+            
           } else { //닫겨진 경우라면
-            $(this).addClass('on').text('MENU');
             _dep1.css({
               visibility: 'visible'
             }).stop().animate({
@@ -25,6 +26,8 @@ $(document).ready(function () {
             },1000, function () {
               _first.focus(); //대상 엘리먼트에 포커스를 강제로 이동
             });
+            $(this).addClass('on').text('MENU');
+            $(this).parent().parent().css('z-index', '1000');
           }
 
           _first.on('keydown', function (e) {

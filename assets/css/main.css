@@ -1,9 +1,12 @@
-#intro {
-  display: none;
+#cnt_wrap {
+  overflow: hidden;
   width: 100vw;
-  height: 100vh;
+  height: 100vh; }
+
+#intro {
   font-family: FiraCode;
-  font-size: 50px; }
+  font-size: 50px;
+  cursor: pointer; }
   #intro #typing {
     display: inline-block;
     text-align: center;
@@ -13,8 +16,10 @@
     #intro #typing p {
       display: inline-block;
       line-height: 100vh; }
-    #intro #typing span {
+    #intro #typing .color {
       color: #F6E25D; }
+  #intro span + span {
+    margin-left: 10px; }
   #intro #caret {
     display: inline-block;
     animation-name: cursor;
@@ -53,12 +58,12 @@
     transform: translateY(10%); } }
   #index .bgm {
     text-align: center;
-    padding-top: 75px;
     width: 80%;
     font-size: 20px;
     position: absolute;
-    top: 0;
-    left: 10%; }
+    top: 75px;
+    left: 10%;
+    z-index: 1000; }
     #index .bgm p {
       display: inline-block; }
     #index .bgm button {
@@ -123,13 +128,13 @@
           box-sizing: border-box;
           padding: 15px 30px; }
       #index .center .center_menu .whale {
-        animation: whale_ani 50s linear 0s infinite normal; }
+        animation: whale_ani 1500s linear 0s infinite normal; }
         #index .center .center_menu .whale > img {
           width: 330px; }
       #index .center .center_menu .earth {
-        animation: earth_ani 50s linear 0s infinite normal; }
+        animation: earth_ani 1500s linear 0s infinite normal; }
       #index .center .center_menu .moon {
-        animation: moon_ani 50s linear 0s infinite normal; }
+        animation: moon_ani 1500s linear 0s infinite normal; }
 @keyframes whale_ani {
   0% {
     top: -50px;
@@ -166,7 +171,7 @@
     left: 600px; } }
 @keyframes earth_ani {
   0% {
-    top: 195px;
+    top: 180px;
     left: 125px; }
   10% {
     top: 270px;
@@ -234,16 +239,18 @@
     left: 1210px; } }
   #index .right {
     writing-mode: vertical-rl;
-    text-orientation: upright; }
+    text-orientation: upright;
+    -webkit-text-stroke: 1px #999A9C;
+    text-stroke: 1px #999A9C; }
     #index .right p {
       display: inline-block;
       position: absolute;
       letter-spacing: 20px; }
       #index .right p:nth-child(1) {
         top: 170px;
-        right: 90px; }
+        right: 110px; }
       #index .right p:nth-child(2) {
         top: 550px;
-        right: 50px; }
+        right: 80px; }
 
 /*# sourceMappingURL=main.css.map */
