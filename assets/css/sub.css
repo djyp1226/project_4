@@ -169,7 +169,6 @@
 #acce_wrap {
   font-family: NtSansKR; }
   #acce_wrap #acce_main {
-    display: none;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     background-size: cover !important;
@@ -210,86 +209,88 @@
         -moz-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s; }
-  #acce_wrap #acce_tab::before {
-    content: "";
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    background-size: cover !important;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: url("../images/accessibility/acce_tab_bg.png");
-    z-index: -1; }
-  #acce_wrap #acce_tab #tab_box::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 1920px;
-    height: 1920px;
-    display: inline-block;
-    border-radius: 50% 50% 0 0; }
-  #acce_wrap #acce_tab #tablist li {
-    cursor: pointer;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: #000000;
-    color: #ffffff;
-    text-align: center;
-    line-height: 80px;
-    font-size: 25px;
-    position: absolute;
-    z-index: 5; }
-    #acce_wrap #acce_tab #tablist li:nth-child(1) {
-      top: 50px;
-      right: 380px; }
-    #acce_wrap #acce_tab #tablist li:nth-child(2) {
-      top: 125px;
-      right: 280px; }
-    #acce_wrap #acce_tab #tablist li:nth-child(3) {
-      top: 205px;
-      right: 190px; }
-    #acce_wrap #acce_tab #tablist li:nth-child(4) {
-      top: 295px;
-      right: 110px; }
-  #acce_wrap #acce_tab #tablist li.active {
-    background: #F6E25D;
-    color: #000000; }
-  #acce_wrap #acce_tab .tabpanel {
-    position: absolute;
-    top: 100px;
-    left: 0;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; }
-    #acce_wrap #acce_tab .tabpanel h1 {
-      font-size: 30px;
-      text-align: center; }
-    #acce_wrap #acce_tab .tabpanel ul {
-      text-align: center; }
-    #acce_wrap #acce_tab .tabpanel li {
-      margin-top: 80px;
-      text-align: center; }
-      #acce_wrap #acce_tab .tabpanel li p {
-        display: inline-block;
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        border: 1px solid #999A9C;
-        word-break: keep-all;
-        font-size: 16px;
-        width: 1000px;
-        text-align: left;
-        line-height: 30px;
-        background: #000000;
-        padding: 40px 80px; }
-      #acce_wrap #acce_tab .tabpanel li img {
-        display: inline-block;
-        margin-top: 30px;
-        width: 1200px; }
-  #acce_wrap #acce_tab .tabpanel.active {
-    display: inline-block; }
+  #acce_wrap #acce_tab {
+    display: none; }
+    #acce_wrap #acce_tab::before {
+      content: "";
+      -webkit-background-size: cover !important;
+      -moz-background-size: cover !important;
+      background-size: cover !important;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-image: url("../images/accessibility/acce_tab_bg.png");
+      z-index: -1; }
+    #acce_wrap #acce_tab #tab_box::before {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.7);
+      width: 1920px;
+      height: 1920px;
+      display: inline-block;
+      border-radius: 50% 50% 0 0; }
+    #acce_wrap #acce_tab #tablist li {
+      cursor: pointer;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: #000000;
+      color: #ffffff;
+      text-align: center;
+      line-height: 80px;
+      font-size: 25px;
+      position: absolute;
+      z-index: 5; }
+      #acce_wrap #acce_tab #tablist li:nth-child(1) {
+        top: 50px;
+        right: 380px; }
+      #acce_wrap #acce_tab #tablist li:nth-child(2) {
+        top: 125px;
+        right: 280px; }
+      #acce_wrap #acce_tab #tablist li:nth-child(3) {
+        top: 205px;
+        right: 190px; }
+      #acce_wrap #acce_tab #tablist li:nth-child(4) {
+        top: 295px;
+        right: 110px; }
+    #acce_wrap #acce_tab #tablist li.active {
+      background: #F6E25D;
+      color: #000000; }
+    #acce_wrap #acce_tab .tabpanel {
+      position: absolute;
+      top: 100px;
+      left: 0;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      #acce_wrap #acce_tab .tabpanel h1 {
+        font-size: 30px;
+        text-align: center; }
+      #acce_wrap #acce_tab .tabpanel ul {
+        text-align: center; }
+      #acce_wrap #acce_tab .tabpanel li {
+        margin-top: 80px;
+        text-align: center; }
+        #acce_wrap #acce_tab .tabpanel li p {
+          display: inline-block;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+          border: 1px solid #999A9C;
+          word-break: keep-all;
+          font-size: 16px;
+          width: 1000px;
+          text-align: left;
+          line-height: 30px;
+          background: #000000;
+          padding: 40px 80px; }
+        #acce_wrap #acce_tab .tabpanel li img {
+          display: inline-block;
+          margin-top: 30px;
+          width: 1200px; }
+    #acce_wrap #acce_tab .tabpanel.active {
+      display: inline-block; }
 
 /*# sourceMappingURL=sub.css.map */

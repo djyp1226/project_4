@@ -137,7 +137,7 @@
 #acce_wrap{
     font-family: NtSansKR;
     #acce_main{
-    display: none;
+    
     @include bgsize(cover); width: 100vw; height: 100vh;
     background-image: url("../images/accessibility/acce_main_bg.png"); 
         .acce_left{
@@ -153,6 +153,7 @@
         }
     }
     #acce_tab{
+        display: none;
         &::before{
             content: "";@include bgsize(cover); width: 100vw; height: 100vh; position: fixed; top: 0; left: 0;
             background-image: url("../images/accessibility/acce_tab_bg.png"); z-index: -1;
