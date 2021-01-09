@@ -1,13 +1,12 @@
 $(document).ready(function () {
 
   //space(32) = tab(9)  
-  $(window).on('keydown', function (e) {
-    // if(e.keyCode===32) {e.keyCode===9}
-    // var tab_key = e.keyCode === 9
-    var tab_key = jQuery.Event( "keydown", { keyCode: 9 } );
-    var spacebar = jQuery.Event( "keydown", { keyCode: 32 } );
-    spacebar.trigger(tab_key);
-});
+//   $(window).on('keydown', function (e) {
+
+//     var tab_key = jQuery.Event( "keydown", { keyCode: 9 } );
+//     var spacebar = jQuery.Event( "keydown", { keyCode: 32 } );
+//     spacebar.trigger(tab_key);
+// });
 
     // 네비게이션
     var _dep1 = $('#gnb ul ul');
@@ -53,7 +52,7 @@ $(document).ready(function () {
           });
           
         });
-        
+
     //바깥을 클릭하는 경우도 닫겨진다
     !($('#nav_box')).on('click', function () {
       $('#nav_box button').trigger('click');

@@ -136,27 +136,38 @@
     #pj_main{    
     @include bgsize(cover); text-align: center; width: 100vw; height: 100vh;
     background-image: url("../images/project/project_main_bg.png");
-    h1{font-size: 35px; padding-top: 50px; font-weight: 400;}
+    h2{font-size: 80px; padding-top: 80px; font-weight: 400; position: relative; z-index: 1;
+        span{position: absolute; bottom: 15px; right: 540px; color:  rgba(246, 226, 93, 0.4);;}
+    }
     }
     .pj_list{
         float: left; text-align: center; width: 100%; margin-top: 50px;
-        ul{display: inline-block;        
-            .main_view{
+        >ul{
+            display: inline-block; width: 422px;       
+            .main_view{ 
                 display: inline-block;
                 a:hover,a:focus{}
-                img{}
-                strong{font-weight: 400; position: absolute; bottom: 15px; right: 0; font-size: 35px;transform: rotate(-30deg);}
+                img{width: 422px; height: 510px;}
+                strong{font-weight: 400; position: absolute; bottom: 0px; right: 0; font-size: 35px;transform: rotate(-30deg);}
             }
             .over_view{
-
+                // display: none;
+                a{display: block;}
+                img{}
+                ul{
+                    width: 422px; height: 157px;
+                    h3{font-size: 35px; line-height: 40px;
+                        padding-left: 240px; position: relative;
+                    &::after{content: ""; position: absolute; top: 13px; left: 0; background: #ffffff; width: 211px; height: 5px; display: block;}
+                }
+                li{width: 422px; margin-top: 20px; text-align: left;
+                }
+                }
             }  
             >li{
             display: inline-block; float: left;
             }
-            ul{
-
-            }
-            +ul{margin-left: 50px;}
+            +ul{margin-left: 130px;}
             &:nth-child(1){position: relative;
                 .main_view{ background: red;}
                 .over_view{position: absolute; top: -30px; left: 0;}

@@ -74,13 +74,18 @@ $(document).ready(function(){
     }
 
     // project main_view display:none
-      //1) 초기설정
-      // var project = $('#project_wrap #pj_main .pj_list ul')
-      
-      // project.find('.over_view').hide();
-      // project.find('.main_view').on('mouseenter focusin', function () {
-      //   // $(this).find('main_view').hide().siblings('over_view').show();
-      //   $(this).find('main_view').css({'display': none});
-      //   $(this).find('over_view').show();
-      // });
+    
+      var project = $('#project_wrap #pj_main .pj_list ul')
+  
+      project.find('.over_view').hide();
+      project.find('li').on('mouseenter focusin', function () {
+        if($(this).hasClass('main_view')) 
+        {$(this).hide().siblings('.over_view').show();}
+
+        else if($(this).hasClass('over_view')) {
+          $(this).on('mouseleave focusout', function () {
+            ('.over_view').siblings('.main_view').show();
+          });
+        }
+      });
 });
