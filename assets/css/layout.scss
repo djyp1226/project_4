@@ -2,7 +2,7 @@
 @import "_var", "_mixin";
 
 #header{
-    position: fixed; top: 0; right: 0; z-index: 1000; width: 100%;
+    position: fixed; top: 0; left: 0; z-index: 1000;
     .logo{
     padding: 50px;
     a{display: block; width: 100px;
@@ -10,7 +10,7 @@
     }
     }
     #nav_box{
-        position: absolute; top: 0; right: 0px; z-index: 10000;
+        position: absolute; top: 0; left: 1900px; z-index: 10000; 
         .btn_box{width: 80px;height: 80px; text-align: center; font-size: 18px; line-height: 80px; letter-spacing: 5px;border: 1px solid #ffffff; position: absolute; top: 50px;right: 50px;
         &:focus,&:hover{background: #ffffff; color: #000000;@include transition(all 0.3s);}
         }
@@ -18,7 +18,7 @@
     }
 
     #nav_box.on{
-        width: 100vw; height: 100vh;
+        width: 100vw; height: 100vh; left: 0;
         .btn_box{width: 80px;height: 80px; text-align: center; font-size: 18px; line-height: 80px; letter-spacing: 5px;border: 1px solid #000000; position: absolute; top: 50px;right: 780px; background: #ffffff; color: #000000;}
         #gnb{  
             background: #000000 !important;
@@ -38,7 +38,7 @@
             }
             .nav1{
                 height:350px; line-height: 400px;
-                a{background: no-repeat 0px 20px;} //여기 추가함
+                a{background: no-repeat 0px 20px;}
                 a::after{top: 150px;}
                 a:hover, a:focus{background: url("../images/common/nav_hover_1.png") 60px 20px no-repeat;}
             }
@@ -48,7 +48,7 @@
             .nav3{
                 a:hover, a:focus{background: url("../images/common/nav_hover_3.png") 60px 0px no-repeat;}
             }
-        }        &::before{content: "";background-color: rgba(0, 0, 0, 0.7);
+        }        &::before{content: "";background-color: rgba(0, 0, 0, 0.7); cursor: pointer;
             width:100vw;height: 100vh;display: block;
             position: absolute; top: 0; left: 0;}
     }

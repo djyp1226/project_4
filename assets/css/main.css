@@ -65,7 +65,8 @@
     left: 10%;
     z-index: 1000; }
     #index .bgm p {
-      display: inline-block; }
+      display: inline-block;
+      cursor: default; }
     #index .bgm button {
       display: inline-block;
       cursor: pointer; }
@@ -79,7 +80,9 @@
     left: -210px;
     transform: rotate(90deg); }
     #index .left_menu li {
-      display: inline-block; }
+      display: inline-block;
+      letter-spacing: 4.3px;
+      font-size: 18px; }
       #index .left_menu li + li {
         margin-left: 65px; }
   #index .rotate {
@@ -95,10 +98,11 @@
     width: 1500px;
     height: 400px;
     top: -70%;
-    left: 50px;
-    clip: rect(1px, 1px, 1px, 1px); }
+    left: 50px; }
     #index .center strong {
-      display: none;
+      display: inline-block;
+      cursor: default;
+      animation: center_text 5s linear 0s infinite normal;
       font-size: 50px;
       -webkit-text-stroke: 1px #000000;
       text-stroke: 1px #000000;
@@ -106,6 +110,13 @@
       position: absolute;
       top: calc(50% - 25px);
       left: 0; }
+@keyframes center_text {
+  from {
+    transform: perspective(0px) rotateY(0deg); }
+  50% {
+    transform: perspective(500px) rotateY(180deg); }
+  to {
+    transform: perspective(0px) rotateY(360deg); } }
     #index .center > img {
       display: inline-block;
       width: 1300px;
@@ -128,13 +139,13 @@
           box-sizing: border-box;
           padding: 15px 30px; }
       #index .center .center_menu .whale {
-        animation: whale_ani 1500s linear 0s infinite normal; }
+        animation: whale_ani 1000s linear 0s infinite normal; }
         #index .center .center_menu .whale > img {
           width: 330px; }
       #index .center .center_menu .earth {
-        animation: earth_ani 1500s linear 0s infinite normal; }
+        animation: earth_ani 1000s linear 0s infinite normal; }
       #index .center .center_menu .moon {
-        animation: moon_ani 1500s linear 0s infinite normal; }
+        animation: moon_ani 1000s linear 0s infinite normal; }
 @keyframes whale_ani {
   0% {
     top: -50px;
@@ -171,37 +182,37 @@
     left: 600px; } }
 @keyframes earth_ani {
   0% {
-    top: 180px;
-    left: 125px; }
-  10% {
     top: 270px;
     left: 470px; }
-  20% {
+  10% {
     top: 255px;
     left: 805px; }
-  30% {
+  20% {
     top: 270px;
     left: 950px; }
-  40% {
+  30% {
     top: 50px;
     left: 1210px; }
-  50% {
+  40% {
     top: -30px;
     left: 950px; }
-  60% {
+  50% {
     top: -50px;
     left: 600px; }
-  70% {
+  60% {
     top: -50px;
     left: 400px; }
-  80% {
+  70% {
     top: 0px;
     left: 80px; }
-  90% {
+  80% {
     top: 95px;
     left: 15px; }
-  100% {
+  90% {
     top: 195px;
+    left: 125px; }
+  100% {
+    top: 180px;
     left: 125px; } }
 @keyframes moon_ani {
   0% {
@@ -241,7 +252,8 @@
     writing-mode: vertical-rl;
     text-orientation: upright;
     -webkit-text-stroke: 1px #999A9C;
-    text-stroke: 1px #999A9C; }
+    text-stroke: 1px #999A9C;
+    cursor: default; }
     #index .right p {
       display: inline-block;
       position: absolute;

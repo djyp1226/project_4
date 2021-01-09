@@ -1,9 +1,8 @@
 #header {
   position: fixed;
   top: 0;
-  right: 0;
-  z-index: 1000;
-  width: 100%; }
+  left: 0;
+  z-index: 1000; }
   #header .logo {
     padding: 50px; }
     #header .logo a {
@@ -15,7 +14,7 @@
   #header #nav_box {
     position: absolute;
     top: 0;
-    right: 0px;
+    left: 1900px;
     z-index: 10000; }
     #header #nav_box .btn_box {
       width: 80px;
@@ -39,7 +38,8 @@
       display: none; }
   #header #nav_box.on {
     width: 100vw;
-    height: 100vh; }
+    height: 100vh;
+    left: 0; }
     #header #nav_box.on .btn_box {
       width: 80px;
       height: 80px;
@@ -108,6 +108,7 @@
     #header #nav_box.on::before {
       content: "";
       background-color: rgba(0, 0, 0, 0.7);
+      cursor: pointer;
       width: 100vw;
       height: 100vh;
       display: block;

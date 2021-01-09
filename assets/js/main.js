@@ -1,12 +1,15 @@
 $(document).ready(function () {
-    //인트로 화면 먼저
+    
+    //인트로 설정
     $('#intro').on('click', function () {
         $('#intro').css('display', 'none');
+    });
+    $(window).on('keydown', function (e) {
+        if (e.keyCode === 32) $('#intro').css('display', 'none');
     });
 
     // 인트로
     var _typing = $('#typing p');
-
     //1) #typing 요소의 텍스트 가져오기
     var text = _typing.text();
     //console.log(text); //var=space;
@@ -43,25 +46,20 @@ $(document).ready(function () {
         $(this).delay(delay).show(10);
     });
 
-
-
-    //메인 음악
-
-        $('#index .bgm button').on('click', function () {
-            $(this).toggleClass('music');
-            var audio = new Audio('assets/music/HansZimmer_FirstStep.ogg');
-            
-            if ($(this).hasClass('music')) {
-                audio.loop = true; // 반복재생
-                audio.volume = 0.5; // 음량 설정
-                audio.play(); // 재생
-            } 
-            else if (!$(this).hasClass('music')) {
-                audio.pause();
-            }
-            else {
-                audio.pause();// 멈추기가 안된다
-            }
-            console.log($(this));
+    //메인 음악(script 형식)
+        var bgm = document.getElementById("bgmAudio");
+        function playAudio() {
+            bgm.play();
+        }
+        function pauseAudio() {
+            bgm.pause();
+        }
+        $("#cnt1 .bgm button").on('click', function () {
+            if ($(this).hasClass('bgm_play')) playAudio();
+            else pauseAudio();
         });
+
+    //메인 아이콘
+        var center = $('#cnt_wrap #index .center .center_menu');
+
 });

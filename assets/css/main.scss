@@ -52,7 +52,7 @@
     }
     .bgm{
     text-align: center; width: 80%; font-size: 20px; position: absolute; top: 75px;left: 10%; z-index: 1000;
-    p{display: inline-block;}
+    p{display: inline-block; cursor: default;}
     button{display: inline-block; cursor: pointer;}   
     .bgm_play{background: green;}
     .bgm_pause{background: red;}
@@ -60,7 +60,7 @@
 
     .left_menu{
     position: absolute; top: 520px;left: -210px; transform: rotate(90deg);
-    li{display: inline-block;
+    li{display: inline-block; letter-spacing: 4.3px; font-size: 18px;
     +li{margin-left: 65px;}}
     }
     .rotate{display: inline-block; margin-top: -4%; margin-left: 3%; width: 80px;height: 50px;}
@@ -69,9 +69,15 @@
         display: inline-block;
         text-align: center; position: relative;
         width: 1500px; height: 400px; top: -70%; left: 50px;
-        clip: rect(1px, 1px, 1px, 1px);
-        strong{//display: inline-block; 
-            display: none;
+        
+        strong{
+            display: inline-block; cursor: default;
+            animation: center_text 5s linear 0s infinite normal ;
+            @keyframes center_text {
+                from{transform: perspective(0px) rotateY(0deg);}
+                50%{transform: perspective(500px) rotateY(180deg);}
+                to{transform: perspective(0px) rotateY(360deg);}
+            }
             font-size: 50px; @include text-stroke(1px #000000); width: 100%; position: absolute; top: calc(50% - 25px);left: 0;}
         >img{display: inline-block; width: 1300px; height: 400px;}
         
@@ -86,16 +92,16 @@
                     border: 5px solid #ffffff; font-family: PaintChocolate; font-size: 80px; @include border-box; padding: 15px 30px;}
             }
             .whale{
-                animation: whale_ani 1500s linear 0s infinite normal ;
+                animation: whale_ani 1000s linear 0s infinite normal ;
                 
                 >img{width: 330px;}               
             }
             .earth{
-                animation: earth_ani 1500s linear 0s infinite normal ;
+                animation: earth_ani 1000s linear 0s infinite normal ;
                 
             }
             .moon{
-                animation: moon_ani 1500s linear 0s infinite normal ;              
+                animation: moon_ani 1000s linear 0s infinite normal ;              
             }
 
         }
@@ -113,17 +119,17 @@
             100%{top: -50px;left: 600px;}
         } 
         @keyframes earth_ani{
-            0%{top: 180px; left: 125px;}
-            10%{top: 270px; left: 470px;}
-            20%{top: 255px; left: 805px;}
-            30%{top: 270px; left: 950px;}
-            40%{top: 50px; left: 1210px;}
-            50%{top: -30px; left: 950px;}
-            60%{top: -50px;left: 600px;}
-            70%{top: -50px;left: 400px;}
-            80%{top: 0px; left: 80px;}
-            90%{top: 95px; left: 15px;}
-            100%{top: 195px; left: 125px;}
+            0%{top: 270px; left: 470px;}
+            10%{top: 255px; left: 805px;}
+            20%{top: 270px; left: 950px;}
+            30%{top: 50px; left: 1210px;}
+            40%{top: -30px; left: 950px;}
+            50%{top: -50px;left: 600px;}
+            60%{top: -50px;left: 400px;}
+            70%{top: 0px; left: 80px;}
+            80%{top: 95px; left: 15px;}
+            90%{top: 195px; left: 125px;}
+            100%{top: 180px; left: 125px;}
         } 
         @keyframes moon_ani{
             0%{top: 50px; left: 1210px;}
@@ -142,7 +148,7 @@
 
     .right{
         writing-mode: vertical-rl; text-orientation: upright;
-        @include text-stroke (1px $gray);
+        @include text-stroke (1px $gray); cursor: default;
         p{display: inline-block;position: absolute;
         letter-spacing: 20px;
         &:nth-child(1){top: 170px; right: 110px;}
