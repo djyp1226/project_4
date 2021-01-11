@@ -26,7 +26,7 @@
   #contact_wrap #cnt1 .youth ul {
     display: none;
     position: absolute;
-    top: 480px;
+    top: 500px;
     left: 150px; }
     #contact_wrap #cnt1 .youth ul.view {
       display: block; }
@@ -41,7 +41,7 @@
     #contact_wrap #cnt1 .youth .c1_txt li + li {
       margin-top: 20px; }
 #contact_wrap #cnt1 .youth.on h1::before {
-  width: 480px;
+  width: 430px;
   -webkit-transition: all 1s;
   -moz-transition: all 1s;
   -o-transition: all 1s;
@@ -175,13 +175,16 @@
 #acce_wrap {
   font-family: NtSansKR; }
   #acce_wrap #acce_main {
-    display: none;
     -webkit-background-size: cover !important;
     -moz-background-size: cover !important;
     background-size: cover !important;
     width: 100vw;
     height: 100vh;
     background-image: url("../images/accessibility/acce_main_bg.png"); }
+    #acce_wrap #acce_main canvas {
+      width: 100%;
+      height: 100%;
+      vertical-align: bottom; }
     #acce_wrap #acce_main .acce_left {
       margin-left: 150px;
       padding-top: 250px; }
@@ -200,16 +203,18 @@
         margin-left: 10px;
         font-size: 20px;
         line-height: 65px; }
-    #acce_wrap #acce_main button {
+    #acce_wrap #acce_main a {
       font-size: 20px;
       display: inline-block;
       width: 250px;
       height: 70px;
-      border: 1px solid #ffffff;
+      border: 1px solid #999A9C;
+      text-align: center;
+      line-height: 68px;
       position: absolute;
       bottom: 245px;
       right: 300px; }
-      #acce_wrap #acce_main button:hover, #acce_wrap #acce_main button:focus {
+      #acce_wrap #acce_main a:hover, #acce_wrap #acce_main a:focus {
         background: #ffffff;
         color: #000000;
         -webkit-transition: all 0.3s;
@@ -314,96 +319,76 @@
     display: inline-block; }
 
 #project_wrap #pj_main {
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  background-size: cover !important;
-  text-align: center;
   width: 100vw;
-  height: 100vh;
-  background-image: url("../images/project/project_main_bg.png"); }
-  #project_wrap #pj_main h2 {
-    font-size: 80px;
-    padding-top: 80px;
-    font-weight: 400;
+  height: 100vh; }
+  #project_wrap #pj_main .pj_list ul {
+    float: left;
     position: relative;
-    z-index: 1; }
-    #project_wrap #pj_main h2 span {
-      position: absolute;
-      bottom: 15px;
-      right: 540px;
-      color: rgba(246, 226, 93, 0.4); }
-#project_wrap .pj_list {
-  float: left;
-  text-align: center;
-  width: 100%;
-  margin-top: 50px; }
-  #project_wrap .pj_list > ul {
-    display: inline-block;
-    width: 422px; }
-    #project_wrap .pj_list > ul .main_view {
+    width: 627px;
+    height: 100vh; }
+    #project_wrap #pj_main .pj_list ul li {
       display: inline-block; }
-      #project_wrap .pj_list > ul .main_view img {
-        width: 422px;
-        height: 510px; }
-      #project_wrap .pj_list > ul .main_view strong {
-        font-weight: 400;
-        position: absolute;
-        bottom: 0px;
-        right: 0;
-        font-size: 35px;
-        transform: rotate(-30deg); }
-    #project_wrap .pj_list > ul .over_view a {
-      display: block; }
-    #project_wrap .pj_list > ul .over_view ul {
-      width: 422px;
-      height: 157px; }
-      #project_wrap .pj_list > ul .over_view ul h3 {
-        font-size: 35px;
-        line-height: 40px;
-        padding-left: 240px;
-        position: relative; }
-        #project_wrap .pj_list > ul .over_view ul h3::after {
-          content: "";
-          position: absolute;
-          top: 13px;
-          left: 0;
-          background: #ffffff;
-          width: 211px;
-          height: 5px;
-          display: block; }
-      #project_wrap .pj_list > ul .over_view ul li {
-        width: 422px;
-        margin-top: 20px;
-        text-align: left; }
-    #project_wrap .pj_list > ul > li {
-      display: inline-block;
-      float: left; }
-    #project_wrap .pj_list > ul + ul {
-      margin-left: 130px; }
-    #project_wrap .pj_list > ul:nth-child(1) {
-      position: relative; }
-      #project_wrap .pj_list > ul:nth-child(1) .main_view {
-        background: red; }
-      #project_wrap .pj_list > ul:nth-child(1) .over_view {
-        position: absolute;
-        top: -30px;
-        left: 0; }
-    #project_wrap .pj_list > ul:nth-child(2) {
-      position: relative; }
-      #project_wrap .pj_list > ul:nth-child(2) .over_view {
-        position: absolute;
-        top: -30px;
-        left: 0; }
-    #project_wrap .pj_list > ul:nth-child(3) {
-      position: relative; }
-      #project_wrap .pj_list > ul:nth-child(3) .over_view {
-        position: absolute;
-        top: -30px;
-        left: 0; }
+    #project_wrap #pj_main .pj_list ul:nth-child(1) {
+      background-image: url("../images/project/project_main_1.png");
+      border-right: 1px solid #999A9C; }
+    #project_wrap #pj_main .pj_list ul:nth-child(2) {
+      background-image: url("../images/project/project_main_2.png");
+      border-right: 1px solid #999A9C;
+      border-left: 1px solid #999A9C; }
+    #project_wrap #pj_main .pj_list ul:nth-child(3) {
+      background-image: url("../images/project/project_main_3.png");
+      border-left: 1px solid #999A9C; }
+    #project_wrap #pj_main .pj_list ul + ul {
+      margin-left: 19.5px; }
+  #project_wrap #pj_main .pj_list h2 {
+    font-size: 38px;
+    display: block;
+    position: absolute;
+    top: 280px;
+    right: 50px; }
+    #project_wrap #pj_main .pj_list h2::after {
+      content: "";
+      background: #ffffff;
+      height: 1px;
+      width: 400px;
+      position: absolute;
+      top: -70px;
+      right: -50px; }
+  #project_wrap #pj_main .pj_list .open {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #000;
+    padding: 130px 60px; }
+    #project_wrap #pj_main .pj_list .open img {
+      width: 505px;
+      height: 510px; }
+    #project_wrap #pj_main .pj_list .open strong {
+      display: block;
+      font-size: 35px;
+      text-align: right;
+      font-weight: 400;
+      margin-top: 20px; }
+    #project_wrap #pj_main .pj_list .open p {
+      margin-top: 70px;
+      font-size: 20px;
+      line-height: 2.5; }
+    #project_wrap #pj_main .pj_list .open::after {
+      content: "";
+      display: block;
+      background: #ffffff;
+      height: 1px;
+      width: 510px;
+      position: absolute;
+      bottom: 180px;
+      left: calc(50% - 255px); }
 
 #pj_more_wrap {
   width: 100vw;
-  height: 100vh; }
+  overflow: hidden; }
   #pj_more_wrap .txt_l {
     text-align: left; }
   #pj_more_wrap .txt_r {
@@ -414,7 +399,8 @@
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: 30px; }
+    font-size: 30px;
+    z-index: 50; }
   #pj_more_wrap .velvet {
     position: fixed;
     top: 0;
@@ -499,17 +485,10 @@
   #pj_more_wrap .pj_m3 {
     padding: 0 300px;
     width: 100vw;
-    height: 100vh;
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    background-size: cover !important;
-    background-position: center;
-    background-image: url("../images/bioterm/velvet_deep.png"); }
+    height: 100vh; }
     #pj_more_wrap .pj_m3 h3 {
       font-weight: 400;
-      font-size: 130px;
-      -webkit-text-stroke: 0.5px #ffffff;
-      text-stroke: 0.5px #ffffff; }
+      font-size: 130px; }
     #pj_more_wrap .pj_m3 p {
       font-family: NtSansKR;
       font-size: 18px;

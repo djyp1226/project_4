@@ -11,7 +11,7 @@
         h1{
             position: absolute; top: calc(50% - 15px); left: 80%; font-size: 30px;
             &::before{
-                content: ""; display: inline-block; width: 0px; height: 3px; position: absolute; top: 49%; left: -240%; background: #ffffff;
+                content: ""; display: inline-block; width: 0px; height: 3px; position: absolute; top: 49%; left: -240%; background: #ffffff; 
                 }
         }
         @include bgsize(cover);
@@ -19,7 +19,7 @@
          background-position: center;
         background-image: url("../images/contact/contact_bg.png");
         ul{
-            display: none;position: absolute;top: 480px;left: 150px;
+            display: none;position: absolute;top: 500px;left: 150px;
             &.view{display: block;}
         }
         .c1_txt{
@@ -34,7 +34,7 @@
     }
 .youth.on{
     h1{
-        &::before{width: 480px; @include transition(all 1s);}
+        &::before{width: 430px; @include transition(all 1s);}
     }
     .c1_txt{
         li{
@@ -120,7 +120,7 @@
 #acce_wrap{
     font-family: NtSansKR;
     #acce_main{
-    display: none;
+    canvas{width: 100%; height: 100% ; vertical-align : bottom}
     @include bgsize(cover); width: 100vw; height: 100vh;
     background-image: url("../images/accessibility/acce_main_bg.png"); 
         .acce_left{
@@ -130,7 +130,7 @@
             p{margin-top: 100px; margin-left: 10px; font-size: 20px;line-height: 65px;
             }
         }
-        button{font-size: 20px; display: inline-block; width: 250px; height: 70px; border: 1px solid #ffffff; 
+        a{font-size: 20px; display: inline-block; width: 250px; height: 70px; border: 1px solid $gray; text-align: center ; line-height: 68px;
         position: absolute; bottom: 245px; right: 300px;
         &:hover,&:focus{background: #ffffff; color: #000000;@include transition(all 0.3s);}
         }
@@ -194,61 +194,51 @@
 
 #project_wrap{
     #pj_main{    
-    @include bgsize(cover); text-align: center; width: 100vw; height: 100vh;
-    background-image: url("../images/project/project_main_bg.png");
-    h2{font-size: 80px; padding-top: 80px; font-weight: 400; position: relative; z-index: 1;
-        span{position: absolute; bottom: 15px; right: 540px; color:  rgba(246, 226, 93, 0.4);;}
-    }
-    }
+    width: 100vw; height: 100vh;
     .pj_list{
-        float: left; text-align: center; width: 100%; margin-top: 50px;
-        >ul{
-            display: inline-block; width: 422px;       
-            .main_view{ 
-                display: inline-block;
-                a:hover,a:focus{}
-                img{width: 422px; height: 510px;}
-                strong{font-weight: 400; position: absolute; bottom: 0px; right: 0; font-size: 35px;transform: rotate(-30deg);}
+        ul{
+        float: left; position: relative;width: 627px; height: 100vh;
+            li{
+            display: inline-block;
             }
-            .over_view{
-                // display: none;
-                a{display: block;}
-                img{}
-                ul{
-                    width: 422px; height: 157px;
-                    h3{font-size: 35px; line-height: 40px;
-                        padding-left: 240px; position: relative;
-                    &::after{content: ""; position: absolute; top: 13px; left: 0; background: #ffffff; width: 211px; height: 5px; display: block;}
-                }
-                li{width: 422px; margin-top: 20px; text-align: left;
-                }
-                }
-            }  
-            >li{
-            display: inline-block; float: left;
-            }
-            +ul{margin-left: 130px;}
-            &:nth-child(1){position: relative;
-                .main_view{ background: red;}
-                .over_view{position: absolute; top: -30px; left: 0;}
-            }
-            &:nth-child(2){position: relative;
-                .main_view{}
-                .over_view{position: absolute; top: -30px; left: 0;}
-            }
-            &:nth-child(3){position: relative;
-                .main_view{}
-                .over_view{position: absolute; top: -30px; left: 0;}
-            }
+        &:nth-child(1){
+            background-image: url("../images/project/project_main_1.png");
+            border-right: 1px solid $gray;
         }
-    } 
+        &:nth-child(2){
+            background-image: url("../images/project/project_main_2.png");
+            border-right: 1px solid $gray;border-left: 1px solid $gray;
+        }
+        &:nth-child(3){
+            background-image: url("../images/project/project_main_3.png");
+            border-left: 1px solid $gray;
+        }
+        +ul{margin-left: 19.5px;}
+        }
+        h2{
+            font-size: 38px; display: block; 
+            position: absolute; top: 280px; right: 50px;
+            &::after{content: ""; background: #ffffff; height: 1px; width: 400px; position: absolute; top: -70px; right: -50px;}
+        }
+        .open{
+            display: none;
+            position: absolute; top: 0; left: 0; width: 100%; height: 100vh; background: #000; padding: 130px 60px;
+            img{width: 505px;height: 510px;
+            }
+            strong{display: block;font-size: 35px; text-align: right;font-weight: 400; margin-top: 20px;}
+            p{margin-top: 70px; font-size: 20px; line-height: 2.5;}
+            &::after{
+                content: ""; display: block; background: #ffffff; height: 1px; width: 510px; position: absolute; bottom: 180px; left: calc(50% - 255px);}
+        }
+    }
+}
 }
 
 #pj_more_wrap{
-    .txt_l{text-align: left;}
-    .txt_r{text-align: right;}
-        width: 100vw; height: 100vh;
-        h1{position: fixed; top: 50px; left: 0; width: 100%; text-align: center; font-size: 30px;}
+        width: 100vw; overflow: hidden;
+        .txt_l{text-align: left;}
+        .txt_r{text-align: right;}
+        h1{position: fixed; top: 50px; left: 0; width: 100%; text-align: center; font-size: 30px; z-index:50;}
         .velvet{position: fixed; top: 0; left: 0; z-index: -1;}
         .gra_circle{
             display: inline-block; width: 650px; height: 650px;
@@ -298,8 +288,8 @@
         }
         .pj_m3{
             padding: 0 300px; width: 100vw; height: 100vh;
-            @include bgsize(cover); background-position: center;background-image: url("../images/bioterm/velvet_deep.png");
-            h3{font-weight: 400; font-size: 130px;@include text-stroke(0.5px #ffffff); }
+            // @include bgsize(cover); background-position: center;background-image: url("../images/bioterm/velvet_deep.png");
+            h3{font-weight: 400; font-size: 130px; }
             p{font-family: NtSansKR; font-size: 18px;line-height: 1.6; padding: 40px 40px 0 40px;}
             .why{padding-top: 100px;}
         }

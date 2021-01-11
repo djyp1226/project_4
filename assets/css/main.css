@@ -70,10 +70,12 @@
     #index .bgm button {
       display: inline-block;
       cursor: pointer; }
-    #index .bgm .bgm_play {
-      background: green; }
-    #index .bgm .bgm_pause {
-      background: red; }
+      #index .bgm button > img {
+        display: block;
+        height: 20px; }
+    #index .bgm .bgm_play img {
+      width: 25px;
+      height: 20px; }
   #index .left_menu {
     position: absolute;
     top: 520px;

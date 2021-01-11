@@ -60,6 +60,5 @@ $(document).ready(function () {
     });
 
     //메인 아이콘
-        var center = $('#cnt_wrap #index .center .center_menu');
-
+    // var center = $('#cnt_wrap #index .center .center_menu');
 });
