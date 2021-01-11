@@ -1,23 +1,15 @@
 $(document).ready(function(){
-    var youth = $('#contect_wrap #cnt1 .youth');
+  var _youth = $('#contact_wrap #cnt1 .youth div');
     
-    // contect 선그리기
-    youth.addClass('on');
-    
-    // contect 한영 변환 - html로 태그 바꿔주기
-    $(window).on('scroll', function () {
-        var youth = $('#cnt_wrap #cnt1 .youth');
-
-        if(youth.children('c1_txt').hasClass('view')){
-            console.log(this);
-            youth.removeClass('view').find('c1_en').css('display','none');
-            youth.addClass('view').find('c1_ko').css('display','block');
-        }
-        else if(youth.children().hasClass('c1_ko')){
-            youth.removeClass('view').find('c1_ko').css('display','none');
-            youth.addClass('view').find('c1_en').css('display','block');
-        }
-    });
+  // contect 선그리기
+  _youth.parent().addClass('on');
+  
+  // contect 한영 변환 - html로 태그 바꿔주기
+  $(window).on('scroll', function () {
+    var scrollY = $(this).scrollTop();
+    // 스크롤바를 움직이면 영어는 .view를 제거하고 바로 뒤 한글에는 .view를 추가한다
+    if (scrollY > 1) _youth.find('.c1_txt').removeClass('view').next().addClass('view');
+  });
 
     // acce 달 회전 
     
@@ -74,7 +66,7 @@ $(document).ready(function(){
     }
 
     // project main_view display:none
-    
+
       var project = $('#project_wrap #pj_main .pj_list ul')
   
       project.find('.over_view').hide();

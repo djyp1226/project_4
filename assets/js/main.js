@@ -47,17 +47,17 @@ $(document).ready(function () {
     });
 
     //메인 음악(script 형식)
-        var bgm = document.getElementById("bgmAudio");
-        function playAudio() {
-            bgm.play();
-        }
-        function pauseAudio() {
-            bgm.pause();
-        }
-        $("#cnt1 .bgm button").on('click', function () {
-            if ($(this).hasClass('bgm_play')) playAudio();
-            else pauseAudio();
-        });
+    var bgmAudio = document.getElementById("bgmAudio");
+    function playAudio() {
+        bgmAudio.play();
+    }
+    function pauseAudio() {
+        bgmAudio.pause();
+    }
+    $("#index .bgm button").on('click', function () {
+        if ($(this).hasClass('bgm_play')) playAudio();
+        else pauseAudio();
+    });
 
     //메인 아이콘
         var center = $('#cnt_wrap #index .center .center_menu');
