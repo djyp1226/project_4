@@ -1,10 +1,10 @@
 $(document).ready(function () {
   var _youth = $('#contact_wrap #cnt1 .youth div');
 
-  // contect 선그리기
+  // contact 선그리기
   _youth.parent().addClass('on');
 
-  // contect 한영 변환 - html로 태그 바꿔주기
+  // contact 한영 변환 - html로 태그 바꿔주기
   $(window).on('scroll', function () {
     var scrollY = $(this).scrollTop();
     // 스크롤바를 움직이면 영어는 .view를 제거하고 바로 뒤 한글에는 .view를 추가한다
@@ -102,10 +102,11 @@ $(document).ready(function () {
   $(window).on('scroll', function () {
     clearTimeout(timer);
     timer = setTimeout(function () {
-      if (scrollY > 700) {
+      console.log(scrollY);
+      if (scrollY > 705) {
         circle.css({
           position: 'fixed',
-          top: '-530px'
+          top: '-540px'
         });
       } else{
         circle.css({
@@ -115,4 +116,19 @@ $(document).ready(function () {
       }
     });
   });
+
+  // pj_more greensock
+        //가속도 감속도 효과 https://greensock.com/get-started#easing
+        //gsap.to('선택자', {속성1: 값1, 속성2: 값2, duration: 초});
+        //to : 0%에서 100% 순방향 애니메이션
+        // gsap.to('#pj_more_wrap #bioterm_wrap #bio5 ul li', {top: '100px', width: '1000px', ease: "slow.easeInOut", duration: 3});
+        var pjTxt = 
+        gsap.to('#pj_more_wrap #bioterm_wrap #bio5 ul li', {top: '100px', width: '1000px', ease: "slow.easeInOut", duration: 3});
+
+        //from : 100%에서 0% 역방향 애니메이션
+        //gsap.from('#box', {top: '100px', width: '1000px', backgroundColor: 'red', ease: "power2.easeInOut", duration: 3});
+
+        //fromTo: 0%와 100% 스타일을 스크립트에서 작성
+        //gsap.fromTo('선택자', {0%스타일}, {100%스타일, duration: 초});
+        //gsap.fromTo('#box', {top: '0px', width: '500px', backgroundColor: 'green'}, {top: '100px', width: '1000px', backgroundColor: 'red', ease: "power2.easeInOut", duration: 3});
 });
