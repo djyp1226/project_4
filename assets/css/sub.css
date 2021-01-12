@@ -1,6 +1,15 @@
 #wrap {
   overflow: hidden; }
 
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+  z-index: -1; }
+
 #contact_wrap #cnt1 .youth {
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
@@ -175,16 +184,8 @@
 #acce_wrap {
   font-family: NtSansKR; }
   #acce_wrap #acce_main {
-    -webkit-background-size: cover !important;
-    -moz-background-size: cover !important;
-    background-size: cover !important;
     width: 100vw;
-    height: 100vh;
-    background-image: url("../images/accessibility/acce_main_bg.png"); }
-    #acce_wrap #acce_main canvas {
-      width: 100%;
-      height: 100%;
-      vertical-align: bottom; }
+    height: 100vh; }
     #acce_wrap #acce_main .acce_left {
       margin-left: 150px;
       padding-top: 250px; }
@@ -212,8 +213,8 @@
       text-align: center;
       line-height: 68px;
       position: absolute;
-      bottom: 245px;
-      right: 300px; }
+      bottom: 85px;
+      left: calc(50% - 125px); }
       #acce_wrap #acce_main a:hover, #acce_wrap #acce_main a:focus {
         background: #ffffff;
         color: #000000;
@@ -233,21 +234,6 @@
     left: 0;
     background-image: url("../images/accessibility/acce_tab_bg.png");
     z-index: -1; }
-  #acce_wrap #acce_tab #tab_box::before {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 1920px;
-    display: inline-block;
-    border-radius: 50% 50% 0 0; }
-  #acce_wrap #acce_tab #tab_box::after {
-    content: "";
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 100%;
-    height: 1920px;
-    display: inline-block;
-    border-radius: 0 0 50% 50%;
-    margin-top: -2px; }
   #acce_wrap #acce_tab #tablist li {
     cursor: pointer;
     width: 80px;
@@ -277,19 +263,22 @@
     color: #000000; }
   #acce_wrap #acce_tab .tabpanel {
     display: none;
+    overflow: hidden;
+    width: 1900px;
     position: absolute;
-    top: 100px;
+    top: 0px;
     left: 0;
-    width: 100vw; }
+    z-index: -1; }
     #acce_wrap #acce_tab .tabpanel h2 {
-      font-size: 25px;
+      font-size: 30px;
       text-align: center;
-      cursor: default; }
+      cursor: default;
+      padding-top: 150px; }
     #acce_wrap #acce_tab .tabpanel ul {
       text-align: center;
       margin-bottom: 200px; }
     #acce_wrap #acce_tab .tabpanel li {
-      margin-top: 100px;
+      margin-top: 150px;
       text-align: center;
       cursor: default; }
       #acce_wrap #acce_tab .tabpanel li p {
@@ -310,11 +299,23 @@
         width: 1200px; }
       #acce_wrap #acce_tab .tabpanel li + li {
         margin-top: 200px; }
-  #acce_wrap #acce_tab #tabpanel4 li h3 {
-    margin-top: 50px; }
-  #acce_wrap #acce_tab #tabpanel4 li img {
-    width: 1500px;
-    height: 160px; }
+  #acce_wrap #acce_tab #tabpanel1 {
+    background-image: url("../images/accessibility/acce_tab_circle1.png");
+    padding-bottom: 130px; }
+  #acce_wrap #acce_tab #tabpanel2 {
+    background-image: url("../images/accessibility/acce_tab_circle2.png");
+    padding-bottom: 90px; }
+  #acce_wrap #acce_tab #tabpanel3 {
+    background-image: url("../images/accessibility/acce_tab_circle3.png");
+    padding-bottom: 90px; }
+  #acce_wrap #acce_tab #tabpanel4 {
+    background-image: url("../images/accessibility/acce_tab_circle4.png");
+    padding-bottom: 350px; }
+    #acce_wrap #acce_tab #tabpanel4 li h3 {
+      margin-top: 50px; }
+    #acce_wrap #acce_tab #tabpanel4 li img {
+      width: 1500px;
+      height: 160px; }
   #acce_wrap #acce_tab .tabpanel.active {
     display: inline-block; }
 
@@ -542,16 +543,20 @@
     font-family: NtSansKR; }
     #pj_more_wrap .pj_m5 ul {
       padding-bottom: 200px; }
-      #pj_more_wrap .pj_m5 ul li:nth-child(odd) {
-        text-align: left; }
-      #pj_more_wrap .pj_m5 ul li:nth-child(even) {
-        text-align: right; }
-      #pj_more_wrap .pj_m5 ul li p {
-        font-size: 17px;
-        line-height: 2.5;
-        margin-top: 50px; }
-      #pj_more_wrap .pj_m5 ul li + li {
-        margin-top: 200px; }
+      #pj_more_wrap .pj_m5 ul li {
+        position: relative;
+        bottom: 0%;
+        transform: translateY(0%); }
+        #pj_more_wrap .pj_m5 ul li:nth-child(odd) {
+          text-align: left; }
+        #pj_more_wrap .pj_m5 ul li:nth-child(even) {
+          text-align: right; }
+        #pj_more_wrap .pj_m5 ul li p {
+          font-size: 17px;
+          line-height: 2.5;
+          margin-top: 50px; }
+        #pj_more_wrap .pj_m5 ul li + li {
+          margin-top: 200px; }
   #pj_more_wrap #bioterm_wrap #bio1 a img {
     height: 700px;
     width: auto;

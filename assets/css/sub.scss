@@ -5,6 +5,7 @@
 #wrap{
     overflow: hidden;
 }
+canvas{position: fixed; top: 0; left: 0; width: 100%; height: 100% ; vertical-align : bottom; z-index: -1;}
 #contact_wrap{
 #cnt1{
     .youth{
@@ -120,9 +121,7 @@
 #acce_wrap{
     font-family: NtSansKR;
     #acce_main{
-    canvas{width: 100%; height: 100% ; vertical-align : bottom}
-    @include bgsize(cover); width: 100vw; height: 100vh;
-    background-image: url("../images/accessibility/acce_main_bg.png"); 
+    width: 100vw; height: 100vh;
         .acce_left{
             margin-left: 150px; padding-top: 250px;
             h1{@include text-stroke(1px #ffffff); font-family: Retroica; font-size: 100px;}
@@ -131,7 +130,8 @@
             }
         }
         a{font-size: 20px; display: inline-block; width: 250px; height: 70px; border: 1px solid $gray; text-align: center ; line-height: 68px;
-        position: absolute; bottom: 245px; right: 300px;
+        position: absolute; bottom: 85px; left: calc(50% - 125px);
+        //bottom: 245px; right: 300px;
         &:hover,&:focus{background: #ffffff; color: #000000;@include transition(all 0.3s);}
         }
     }
@@ -141,16 +141,6 @@
             background-image: url("../images/accessibility/acce_tab_bg.png"); z-index: -1; 
             }
         #tab_box{   
-            &::before{
-                content: "";background-color: rgba(0, 0, 0, 0.7);
-                width:100%; height: 1920px; display: inline-block;
-                border-radius: 50% 50% 0 0;
-                }
-            &::after{
-                content: "";background-color: rgba(0, 0, 0, 0.7);
-                width:100%; height: 1920px; display: inline-block;
-                border-radius: 0 0 50% 50%; margin-top: -2px;
-                }
         }
         #tablist{
             li{
@@ -163,14 +153,15 @@
             li.active{background: $yellow; color: #000000;}
         }
         .tabpanel{
-            display: none; 
-            position: absolute; top: 100px; left: 0; width: 100vw;
+            display: none; overflow: hidden; width: 1900px;
+            position: absolute; top: 0px; left: 0; 
+            z-index: -1; 
             // display: flex; flex-direction: column; 
             // align-items:center;justify-content:center; 
-            h2{font-size: 25px; text-align: center;cursor: default;}
+            h2{font-size: 30px; text-align: center;cursor: default;padding-top: 150px;}
             ul{text-align: center;margin-bottom: 200px;}
             li{  
-                margin-top: 100px; text-align: center; cursor: default;
+                margin-top: 150px; text-align: center; cursor: default;
                 p{display: inline-block;  
                 @include border-box;border: 1px solid $gray; 
                 word-break: keep-all; font-size: 16px;width: 1000px;text-align: left; line-height: 30px;background: #000000; padding: 40px 80px;}
@@ -178,18 +169,37 @@
                 +li{margin-top: 200px;}
             }
         }
+        #tabpanel1{
+            background-image: url("../images/accessibility/acce_tab_circle1.png"); padding-bottom: 130px; 
+        }
+        #tabpanel2{
+            background-image: url("../images/accessibility/acce_tab_circle2.png"); padding-bottom: 90px; 
+        }
+        #tabpanel3{
+            background-image: url("../images/accessibility/acce_tab_circle3.png"); padding-bottom: 90px; 
+        }
         #tabpanel4{
+            background-image: url("../images/accessibility/acce_tab_circle4.png"); padding-bottom: 350px; 
             li{
                 h3{margin-top: 50px;}
                 img{width: 1500px; height: 160px;}
             }
         }
+        // &::before{
+        //     content: "";background-color: rgba(0, 0, 0, 0.7);
+        //     width:100vw;height: 1920px; display: inline-block;
+        //     border-radius: 50% 50% 0 0; position: absolute; top: -150px; left: 0; z-index: -1;
+        //     }
+        // &::after{
+        //     content: "";background-color: rgba(0, 0, 0, 0.7);
+        //     width:100vw; height: 1920px; display: inline-block;
+        //     border-radius: 0 0 50% 50%; margin-top: -2px;
+        //     position: absolute; top: 1772px; left: 0;z-index: -1;
+        //     }
         .tabpanel.active{
             display: inline-block;
-            li{}
         }
     }
-
 }
 
 #project_wrap{
@@ -324,6 +334,8 @@
             ul{
                 padding-bottom: 200px;
                 li{
+                    position: relative;
+                    bottom: 0%; transform: translateY(100%);
                     &:nth-child(odd){text-align: left;}
                     &:nth-child(even){text-align: right;}
                     p{font-size: 17px;line-height: 2.5; margin-top: 50px;}

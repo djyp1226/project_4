@@ -98,17 +98,16 @@ $(document).ready(function () {
   // circle fix
   var timer = 0;
   var circle = $('#pj_more_wrap .gra_circle');
-  
+
   $(window).on('scroll', function () {
     clearTimeout(timer);
     timer = setTimeout(function () {
-      console.log(scrollY);
       if (scrollY > 705) {
         circle.css({
           position: 'fixed',
           top: '-540px'
         });
-      } else{
+      } else {
         circle.css({
           position: 'absolute',
           top: '180px'
@@ -118,17 +117,46 @@ $(document).ready(function () {
   });
 
   // pj_more greensock
-        //가속도 감속도 효과 https://greensock.com/get-started#easing
-        //gsap.to('선택자', {속성1: 값1, 속성2: 값2, duration: 초});
-        //to : 0%에서 100% 순방향 애니메이션
-        // gsap.to('#pj_more_wrap #bioterm_wrap #bio5 ul li', {top: '100px', width: '1000px', ease: "slow.easeInOut", duration: 3});
-        var pjTxt = 
-        gsap.to('#pj_more_wrap #bioterm_wrap #bio5 ul li', {top: '100px', width: '1000px', ease: "slow.easeInOut", duration: 3});
+  //가속도 감속도 효과 https://greensock.com/get-started#easing
+  //gsap.to('선택자', {속성1: 값1, 속성2: 값2, duration: 초});
+  //to : 0%에서 100% 순방향 애니메이션
+  // gsap.to('#pj_more_wrap #bioterm_wrap #bio5 ul li', {top: '100px', width: '1000px', ease: "slow.easeInOut", duration: 3});
 
-        //from : 100%에서 0% 역방향 애니메이션
-        //gsap.from('#box', {top: '100px', width: '1000px', backgroundColor: 'red', ease: "power2.easeInOut", duration: 3});
+  var timer = 0;
 
-        //fromTo: 0%와 100% 스타일을 스크립트에서 작성
-        //gsap.fromTo('선택자', {0%스타일}, {100%스타일, duration: 초});
-        //gsap.fromTo('#box', {top: '0px', width: '500px', backgroundColor: 'green'}, {top: '100px', width: '1000px', backgroundColor: 'red', ease: "power2.easeInOut", duration: 3});
+  $(window).on('scroll', function () {
+      var winH = $(this).height();
+      var pjTxt = $('#pj_more_wrap .pj_m5 ul li');
+      // var pjTxtH = outerHeight(true);
+      var pjTxtTop = pjTxt.offset().top;
+      var pjTxtEven = $('#pj_more_wrap .pj_m5 ul li:nth-child(odd)')
+      var pjTxtOdd = $('#pj_more_wrap .pj_m5 ul li:nth-child(even)')
+      
+      console.log(winH);
+      console.log(pjTxtTop);
+
+    clearTimeout(timer);
+    timer = setTimeout(function () {
+      if (scrollY > pjTxt.offset().top - 100) {
+        // alert();
+        console.log(pjTxt);
+        gsap.from(pjTxtEven, 2, {
+            top: 130,
+            right: 130,
+            ease: "power1.bounce",
+            duration: 15,
+            repeat: -1
+            // ,yoyo: true
+          });
+          gsap.from(pjTxtOdd, 2, {
+            top: 130,
+            left: 130,
+            ease: "power1.bounce",
+            duration: 15,
+            repeat: -1
+            // ,yoyo: true
+          });
+        }
+    });
+  });
 });

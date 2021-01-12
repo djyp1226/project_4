@@ -63,7 +63,7 @@
     position: absolute;
     top: 75px;
     left: 10%;
-    z-index: 1000; }
+    z-index: 900; }
     #index .bgm p {
       display: inline-block;
       cursor: default; }
