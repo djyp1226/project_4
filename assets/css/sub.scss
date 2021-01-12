@@ -144,7 +144,7 @@ canvas{position: fixed; top: 0; left: 0; width: 100%; height: 100% ; vertical-al
         }
         #tablist{
             li{
-                cursor: pointer; width: 80px; height: 80px;border-radius: 50%; background: #000000; color: #ffffff; text-align: center; line-height: 80px; font-size: 25px; position: absolute; z-index: 5;
+                cursor: pointer; width: 80px; height: 80px;border-radius: 50%; background: #000000; color: #ffffff; text-align: center; line-height: 80px; font-size: 25px; position: absolute; z-index: 9000;
                 &:nth-child(1){top: 50px; right: 380px;}
                 &:nth-child(2){top: 125px; right: 280px;}
                 &:nth-child(3){top: 205px; right: 190px;}

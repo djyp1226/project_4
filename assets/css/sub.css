@@ -245,7 +245,7 @@ canvas {
     line-height: 80px;
     font-size: 25px;
     position: absolute;
-    z-index: 5; }
+    z-index: 9000; }
     #acce_wrap #acce_tab #tablist li:nth-child(1) {
       top: 50px;
       right: 380px; }
@@ -546,7 +546,7 @@ canvas {
       #pj_more_wrap .pj_m5 ul li {
         position: relative;
         bottom: 0%;
-        transform: translateY(0%); }
+        transform: translateY(100%); }
         #pj_more_wrap .pj_m5 ul li:nth-child(odd) {
           text-align: left; }
         #pj_more_wrap .pj_m5 ul li:nth-child(even) {

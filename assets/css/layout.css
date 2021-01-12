@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   z-index: 1000; }
   #header .logo {
     padding: 50px; }
@@ -11,10 +12,19 @@
       #header .logo a img {
         width: 100px;
         height: 100px; }
+  #header #dim {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); }
   #header #nav_box {
     position: absolute;
     top: 0;
-    left: 1900px;
+    right: -750px;
+    width: 860px;
     z-index: 10000; }
     #header #nav_box .btn_box {
       width: 80px;
@@ -26,7 +36,7 @@
       border: 1px solid #ffffff;
       position: absolute;
       top: 50px;
-      right: 50px; }
+      left: 0; }
       #header #nav_box .btn_box:focus, #header #nav_box .btn_box:hover {
         background: #ffffff;
         color: #000000;
@@ -34,48 +44,28 @@
         -moz-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s; }
-    #header #nav_box .dep1 {
-      display: none; }
-  #header #nav_box.on {
-    width: 100vw;
-    height: 100vh;
-    left: 0; }
-    #header #nav_box.on .btn_box {
-      width: 80px;
-      height: 80px;
-      text-align: center;
-      font-size: 18px;
-      line-height: 80px;
-      letter-spacing: 5px;
-      border: 1px solid #000000;
+    #header #nav_box #gnb {
+      visibility: hidden;
       position: absolute;
-      top: 50px;
-      right: 780px;
-      background: #ffffff;
-      color: #000000; }
-    #header #nav_box.on #gnb {
+      top: 0;
+      right: 0;
       background: #000000 !important;
       width: 750px;
       height: 100vh;
       font-family: PaintChocolate;
-      font-size: 70px;
-      position: absolute;
-      top: 0;
-      right: 0px; }
-      #header #nav_box.on #gnb .dep1 {
-        display: block; }
-      #header #nav_box.on #gnb li {
+      font-size: 70px; }
+      #header #nav_box #gnb li {
         position: relative;
         height: 280px;
         width: 100%;
         line-height: 300px; }
-        #header #nav_box.on #gnb li a {
+        #header #nav_box #gnb li a {
           display: block;
           width: 100%;
           height: 100%;
           padding-left: 130px;
           color: #999A9C; }
-          #header #nav_box.on #gnb li a::after {
+          #header #nav_box #gnb li a::after {
             content: "";
             position: absolute;
             top: 95px;
@@ -83,37 +73,33 @@
             width: 10px;
             height: 100px;
             background: #F4EBDC; }
-        #header #nav_box.on #gnb li a:hover, #header #nav_box.on #gnb li a:focus {
+        #header #nav_box #gnb li a:hover, #header #nav_box #gnb li a:focus {
           -webkit-transition: all 1s;
           -moz-transition: all 1s;
           -o-transition: all 1s;
           transition: all 1s;
           z-index: 1;
           color: #ffffff; }
-          #header #nav_box.on #gnb li a:hover::after, #header #nav_box.on #gnb li a:focus::after {
+          #header #nav_box #gnb li a:hover::after, #header #nav_box #gnb li a:focus::after {
             display: none; }
-      #header #nav_box.on #gnb .nav1 {
+      #header #nav_box #gnb .nav1 {
         height: 350px;
         line-height: 400px; }
-        #header #nav_box.on #gnb .nav1 a {
+        #header #nav_box #gnb .nav1 a {
           background: no-repeat 0px 20px; }
-        #header #nav_box.on #gnb .nav1 a::after {
+        #header #nav_box #gnb .nav1 a::after {
           top: 150px; }
-        #header #nav_box.on #gnb .nav1 a:hover, #header #nav_box.on #gnb .nav1 a:focus {
+        #header #nav_box #gnb .nav1 a:hover, #header #nav_box #gnb .nav1 a:focus {
           background: url("../images/common/nav_hover_1.png") 60px 20px no-repeat; }
-      #header #nav_box.on #gnb .nav2 a:hover, #header #nav_box.on #gnb .nav2 a:focus {
+      #header #nav_box #gnb .nav2 a:hover, #header #nav_box #gnb .nav2 a:focus {
         background: url("../images/common/nav_hover_2.png") 60px 0px no-repeat; }
-      #header #nav_box.on #gnb .nav3 a:hover, #header #nav_box.on #gnb .nav3 a:focus {
+      #header #nav_box #gnb .nav3 a:hover, #header #nav_box #gnb .nav3 a:focus {
         background: url("../images/common/nav_hover_3.png") 60px 0px no-repeat; }
-    #header #nav_box.on::before {
-      content: "";
-      background-color: rgba(0, 0, 0, 0.7);
-      cursor: pointer;
-      width: 100vw;
-      height: 100vh;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0; }
+  #header #nav_box.on {
+    height: 100vh; }
+    #header #nav_box.on .btn_box {
+      border-color: #000000;
+      background: #ffffff;
+      color: #000000; }
 
 /*# sourceMappingURL=layout.css.map */
