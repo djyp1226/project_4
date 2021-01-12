@@ -543,20 +543,20 @@ canvas {
     font-family: NtSansKR; }
     #pj_more_wrap .pj_m5 ul {
       padding-bottom: 200px; }
-      #pj_more_wrap .pj_m5 ul li {
-        position: relative;
-        bottom: 0%;
-        transform: translateY(100%); }
-        #pj_more_wrap .pj_m5 ul li:nth-child(odd) {
-          text-align: left; }
-        #pj_more_wrap .pj_m5 ul li:nth-child(even) {
-          text-align: right; }
-        #pj_more_wrap .pj_m5 ul li p {
-          font-size: 17px;
-          line-height: 2.5;
-          margin-top: 50px; }
-        #pj_more_wrap .pj_m5 ul li + li {
-          margin-top: 200px; }
+      #pj_more_wrap .pj_m5 ul li:nth-child(odd) {
+        text-align: left;
+        transform: translate(-130px, 130px);
+        opacity: 0.4; }
+      #pj_more_wrap .pj_m5 ul li:nth-child(even) {
+        text-align: right;
+        transform: translate(130px, 130px);
+        opacity: 0.4; }
+      #pj_more_wrap .pj_m5 ul li p {
+        font-size: 17px;
+        line-height: 2.5;
+        margin-top: 50px; }
+      #pj_more_wrap .pj_m5 ul li + li {
+        margin-top: 200px; }
   #pj_more_wrap #bioterm_wrap #bio1 a img {
     height: 700px;
     width: auto;
