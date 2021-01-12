@@ -13,7 +13,7 @@
     #nav_box{
         position: absolute; top: 0; right: -750px; width: 860px; z-index: 10000; 
         .btn_box{
-            width: 80px;height: 80px; text-align: center; font-size: 18px; line-height: 80px; letter-spacing: 5px;border: 1px solid #ffffff; position: absolute; top: 50px;left: 0;
+            width: 80px;height: 80px; text-align: center; font-size: 18px; line-height: 80px; letter-spacing: 5px;border: 1px solid #ffffff; position: absolute; top: 50px;left: -35px;
             &:focus,&:hover{background: #ffffff; color: #000000;@include transition(all 0.3s);}
         }
         #gnb{

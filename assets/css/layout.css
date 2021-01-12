@@ -36,7 +36,7 @@
       border: 1px solid #ffffff;
       position: absolute;
       top: 50px;
-      left: 0; }
+      left: -35px; }
       #header #nav_box .btn_box:focus, #header #nav_box .btn_box:hover {
         background: #ffffff;
         color: #000000;

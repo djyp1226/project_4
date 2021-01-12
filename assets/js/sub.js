@@ -25,26 +25,15 @@ $(document).ready(function () {
       }
     }, 50);
 
-    // pj_more greensock
-    //가속도 감속도 효과 https://greensock.com/get-started#easing
-    //gsap.to('선택자', {속성1: 값1, 속성2: 값2, duration: 초});
-    //to : 0%에서 100% 순방향 애니메이션
-    // gsap.to('#pj_more_wrap #bioterm_wrap #bio5 ul li', {top: '100px', width: '1000px', ease: "slow.easeInOut", duration: 3});
-    $('.pj_m5 ul li').each(function (index, element) {
-      if (scrollY > $(this).offset().top - 500) {
-          gsap.to(element, {y: 0, x: 0,ease: "power1.bounce",duration: 8});
-      }
-    });
-    /* from이 안되어서 to로 변경함
     $('#bio5 ul li').each(function (index, element) {
       if (scrollY > $(this).offset().top - 500) {
         if (index % 2 === 0){ //짝수
-          gsap.from(element, 2, {y: 130, x: -130,ease: "power1.bounce",duration: 3, opacity: 0});
+          gsap.to(element, 2, {y: 0, x: 0,ease: "power1.bounce",duration: 3});
         } else { //홀수
-          gsap.from(element, 2, {y: 130,x: 130,ease: "power1.bounce",duration: 3, opacity: 0});
+          gsap.to(element, 2, {y: 0,x: 0,ease: "power1.bounce",duration: 3});
         }
       }
-    }); */
+    });
   
   });
 
