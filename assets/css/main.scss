@@ -10,7 +10,7 @@
 // intro
 #intro{
     // display: none;
-    font-family: FiraCode; font-size: 50px; cursor: pointer;
+    font-family: FiraCode; font-size: 50px;
     #typing{
     display: inline-block; text-align: center;
     width: 100vw; height: 100%; margin: 0 auto;
@@ -52,7 +52,7 @@
     }
     .bgm{
         text-align: center; width: 80%; font-size: 20px; position: absolute; top: 75px;left: 10%; z-index: 5000; 
-        p{display: inline-block; cursor: default;}
+        p{display: inline-block;}
         button{display: inline-block; cursor: pointer; 
             >img{display: block; height: 20px;}
         }
@@ -74,7 +74,7 @@
         width: 1500px; height: 400px; top: -70%; left: 50px;
         
         strong{
-            display: inline-block; cursor: default;
+            display: inline-block;
             animation: center_text 5s linear 0s infinite normal ;
             @keyframes center_text {
                 from{transform: perspective(0px) rotateY(0deg);}

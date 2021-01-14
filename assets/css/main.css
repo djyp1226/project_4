@@ -5,8 +5,7 @@
 
 #intro {
   font-family: FiraCode;
-  font-size: 50px;
-  cursor: pointer; }
+  font-size: 50px; }
   #intro #typing {
     display: inline-block;
     text-align: center;
@@ -65,8 +64,7 @@
     left: 10%;
     z-index: 5000; }
     #index .bgm p {
-      display: inline-block;
-      cursor: default; }
+      display: inline-block; }
     #index .bgm button {
       display: inline-block;
       cursor: pointer; }
@@ -103,7 +101,6 @@
     left: 50px; }
     #index .center strong {
       display: inline-block;
-      cursor: default;
       animation: center_text 5s linear 0s infinite normal;
       font-size: 50px;
       -webkit-text-stroke: 1px #000000;

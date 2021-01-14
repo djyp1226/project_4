@@ -22,37 +22,47 @@
   font-style: normal;
   src: url("../font/FiraCode-Regular.eot");
   src: url("../font/FiraCode-Regular.eot#iefix") format("embedded-opentype"), url("../font/FiraCode-Regular.woff2") format("woff2"), url("../font/FiraCode-Regular.woff") format("woff"), url("../font/FiraCode-Regular.ttf") format("truetype"); }
+body {
+  cursor: url(../images/common/cursor.png), auto; }
+
+p {
+  cursor: url(../images/common/cursor.png), auto; }
+
+#intro {
+  cursor: url(../images/common/cursor_intro.png), auto; }
+
+#intro p {
+  cursor: url(../images/common/cursor_intro.png), auto; }
+
 body, h1, h2, h3, h4, h5, p, ul, button, form {
   margin: 0;
   padding: 0; }
 
 h1, h2, h3, h4, h5 {
   font-size: 100%;
-  font-weight: 400; }
+  font-weight: 400;
+  cursor: url(../images/common/cursor.png), auto; }
 
 ul {
   list-style: none; }
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-  color: inherit; }
-
-button {
-  border: none;
-  background: none;
-  cursor: pointer; }
+  color: inherit;
+  cursor: url(../images/common/cursor_pointer.png), auto; }
 
 button {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
-  line-height: inherit; }
+  line-height: inherit;
+  border: none;
+  background: none;
+  cursor: url(../images/common/cursor_pointer.png), auto; }
 
 img {
   border: none;
-  vertical-align: top; }
-
-img {
+  vertical-align: top;
   max-width: 100%; }
 
 header, nav, section, aside, footer {
