@@ -11,17 +11,17 @@ $(document).ready(function () {
   $(window).on('scroll', function () {
     var scrollY = $(this).scrollTop();
 
-    var numCnt = $('.cnt').size();
-    var widSec = 200*numCnt;
-    var widTotal = widSec+600;
-    $('#contact_wrap').width(widTotal);
-    $('contact_wrap').height(widSec);		
-    $('html, body').animate({scrollTop:widSec}, 2000);
+    // var numCnt = $('.cnt').size();
+    // var widSec = 200*numCnt;
+    // var widTotal = widSec+600;
+    // $('#contact_wrap').width(widTotal);
+    // $('contact_wrap').height(widSec);		
+    // $('html, body').animate({scrollTop:widSec}, 2000);
     
-    $(window).on('scroll',function(){
-      var scroll = $(this).scrollTop();			
-      $('#contact_wrap').stop().animate({left: -scroll}, 600);
-    });
+    // $(window).on('scroll',function(){
+    //   var scroll = $(this).scrollTop();			
+    //   $('#contact_wrap').stop().animate({left: -scroll}, 600);
+    // });
 
     if (scrollY > 1) _youth.find('.c1_txt').removeClass('view').next().addClass('view');
 
