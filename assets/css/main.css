@@ -63,7 +63,7 @@
     position: absolute;
     top: 75px;
     left: 10%;
-    z-index: 900; }
+    z-index: 5000; }
     #index .bgm p {
       display: inline-block;
       cursor: default; }
@@ -121,7 +121,7 @@
     transform: perspective(0px) rotateY(360deg); } }
     #index .center > img {
       display: inline-block;
-      width: 1300px;
+      width: 1200px;
       height: 400px; }
     #index .center .center_menu {
       display: inline-block;
@@ -141,13 +141,13 @@
           box-sizing: border-box;
           padding: 15px 30px; }
       #index .center .center_menu .whale {
-        animation: whale_ani 1000s linear 0s infinite normal; }
+        animation: whale_ani 50s linear 0s infinite normal; }
         #index .center .center_menu .whale > img {
           width: 330px; }
       #index .center .center_menu .earth {
-        animation: earth_ani 1000s linear 0s infinite normal; }
+        animation: earth_ani 50s linear 0s infinite normal; }
       #index .center .center_menu .moon {
-        animation: moon_ani 1000s linear 0s infinite normal; }
+        animation: moon_ani 50s linear 0s infinite normal; }
 @keyframes whale_ani {
   0% {
     top: -50px;

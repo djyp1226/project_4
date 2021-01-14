@@ -51,7 +51,7 @@
         }
     }
     .bgm{
-        text-align: center; width: 80%; font-size: 20px; position: absolute; top: 75px;left: 10%; z-index: 900;
+        text-align: center; width: 80%; font-size: 20px; position: absolute; top: 75px;left: 10%; z-index: 5000; 
         p{display: inline-block; cursor: default;}
         button{display: inline-block; cursor: pointer; 
             >img{display: block; height: 20px;}
@@ -82,7 +82,7 @@
                 to{transform: perspective(0px) rotateY(360deg);}
             }
             font-size: 50px; @include text-stroke(1px #000000); width: 100%; position: absolute; top: calc(50% - 25px);left: 0;}
-        >img{display: inline-block; width: 1300px; height: 400px;}
+        >img{display: inline-block; width: 1200px; height: 400px;}
         
         .center_menu{
             display: inline-block; background: green;
@@ -95,16 +95,16 @@
                     border: 5px solid #ffffff; font-family: PaintChocolate; font-size: 80px; @include border-box; padding: 15px 30px;}
             }
             .whale{
-                animation: whale_ani 1000s linear 0s infinite normal ;
+                animation: whale_ani 50s linear 0s infinite normal ;
                 
                 >img{width: 330px;}               
             }
             .earth{
-                animation: earth_ani 1000s linear 0s infinite normal ;
+                animation: earth_ani 50s linear 0s infinite normal ;
                 
             }
             .moon{
-                animation: moon_ani 1000s linear 0s infinite normal ;              
+                animation: moon_ani 50s linear 0s infinite normal ;              
             }
 
         }

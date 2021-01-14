@@ -11,7 +11,6 @@ $(document).ready(function () {
   $(window).on('scroll', function () {
     var scrollY = $(this).scrollTop();
 
-    // 스크롤바를 움직이면 영어는 .view를 제거하고 바로 뒤 한글에는 .view를 추가한다
     if (scrollY > 1) _youth.find('.c1_txt').removeClass('view').next().addClass('view');
 
     //circle fix
@@ -19,15 +18,15 @@ $(document).ready(function () {
     timer = setTimeout(function () {
       console.log(scrollY);
       if (scrollY > 705) {
-        circle.css({position: 'fixed',top: '-540px'});
+        circle.css({position: 'fixed',top: '-540px','z-index': '5001'});
       } else{
-        circle.css({position: 'absolute',top: '180px'});
+        circle.css({position: 'absolute',top: '180px','z-index': 0 });
       }
     }, 50);
 
-    $('.pj_m5 ul li').each(function (index, element) {
+    $('#pj_more_wrap .pj_m5 ul li').each(function (index, element) {
       if (scrollY > $(this).offset().top - 500) {
-       gsap.to(element, {y: 0, x: 0,ease: "power1.bounce",duration: 3, opacity: 1});
+       gsap.to(element, {y: 0, x: 0,ease: "power1.bounce", duration: 1, opacity: 1});
       }
     });
   
@@ -101,7 +100,7 @@ $(document).ready(function () {
     });
   }
 
-  // project 카드
+  // project main
   $('#project_wrap #pj_main .pj_list ul').on({
     'mouseenter focusin': function () {
       $(this).find('.open').css({display: 'block'});

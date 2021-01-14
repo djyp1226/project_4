@@ -24,8 +24,7 @@
     position: absolute;
     top: 0;
     right: -750px;
-    width: 860px;
-    z-index: 10000; }
+    width: 860px; }
     #header #nav_box .btn_box {
       width: 80px;
       height: 80px;
@@ -36,7 +35,7 @@
       border: 1px solid #ffffff;
       position: absolute;
       top: 50px;
-      left: -35px; }
+      left: -30px; }
       #header #nav_box .btn_box:focus, #header #nav_box .btn_box:hover {
         background: #ffffff;
         color: #000000;
@@ -96,7 +95,8 @@
       #header #nav_box #gnb .nav3 a:hover, #header #nav_box #gnb .nav3 a:focus {
         background: url("../images/common/nav_hover_3.png") 60px 0px no-repeat; }
   #header #nav_box.on {
-    height: 100vh; }
+    height: 100vh;
+    z-index: 10000; }
     #header #nav_box.on .btn_box {
       border-color: #000000;
       background: #ffffff;

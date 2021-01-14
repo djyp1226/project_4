@@ -131,7 +131,7 @@ canvas {
         font-size: 80px;
         color: rgba(255, 255, 255, 0.2);
         position: absolute;
-        top: 0;
+        top: 5px;
         left: 0; }
       #contact_wrap #cnt3 .skill_box li:hover strong, #contact_wrap #cnt3 .skill_box li:focus strong {
         color: rgba(255, 255, 255, 0.2);
@@ -235,6 +235,7 @@ canvas {
     background-image: url("../images/accessibility/acce_tab_bg.png");
     z-index: -1; }
   #acce_wrap #acce_tab #tablist li {
+    z-index: 1001;
     cursor: pointer;
     width: 80px;
     height: 80px;
@@ -244,8 +245,7 @@ canvas {
     text-align: center;
     line-height: 80px;
     font-size: 25px;
-    position: absolute;
-    z-index: 9000; }
+    position: absolute; }
     #acce_wrap #acce_tab #tablist li:nth-child(1) {
       top: 50px;
       right: 380px; }
@@ -401,7 +401,7 @@ canvas {
     width: 100%;
     text-align: center;
     font-size: 30px;
-    z-index: 50; }
+    z-index: 5002; }
   #pj_more_wrap .velvet {
     position: fixed;
     top: 0;
@@ -573,10 +573,6 @@ canvas {
         margin-left: 30px; }
   #pj_more_wrap #bioterm_wrap #bio4 .font li img {
     margin-top: 50px; }
-  #pj_more_wrap #bioterm_wrap #bio4 .palette li span {
-    display: block;
-    width: 100px;
-    height: 100px; }
   #pj_more_wrap #bioterm_wrap #bio4 .palette li:nth-child(1) span {
     background-color: #999999; }
   #pj_more_wrap #bioterm_wrap #bio4 .palette li:nth-child(2) span {
@@ -609,15 +605,8 @@ canvas {
       #pj_more_wrap #hillstate_wrap #hill2 .bna .bna_img img:nth-child(3) {
         width: 299px;
         height: 530px; }
-  #pj_more_wrap #hillstate_wrap #hill4 .font {
-    height: 800px;
-    margin-top: 200px; }
-    #pj_more_wrap #hillstate_wrap #hill4 .font img + img {
-      margin-top: 30px; }
-  #pj_more_wrap #hillstate_wrap #hill4 .palette li span {
-    display: block;
-    width: 100px;
-    height: 100px; }
+  #pj_more_wrap #hillstate_wrap #hill4 .font img + img {
+    margin-top: 30px; }
   #pj_more_wrap #hillstate_wrap #hill4 .palette li:nth-child(1) span {
     background-color: #F4EBDC; }
   #pj_more_wrap #hillstate_wrap #hill4 .palette li:nth-child(2) span {
@@ -628,5 +617,27 @@ canvas {
     background-color: #281E13; }
   #pj_more_wrap #hillstate_wrap #hill4 .palette li:nth-child(5) span {
     background-color: #821E1E; }
+  #pj_more_wrap #portpolio_wrap #port1 a img {
+    height: 550px;
+    width: auto;
+    position: absolute;
+    top: 250px;
+    left: calc(50% - 421.5px); }
+  #pj_more_wrap #portpolio_wrap #port2 {
+    margin-top: 200px; }
+  #pj_more_wrap #portpolio_wrap #port3 .font li img {
+    margin-top: 50px; }
+  #pj_more_wrap #portpolio_wrap #port3 .palette li:nth-child(1) span {
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    background-size: cover !important;
+    background-image: url("../images/portpolio/mini_gradient.png"); }
+  #pj_more_wrap #portpolio_wrap #port3 .palette li:nth-child(2) span {
+    background-color: #f6e25d; }
+  #pj_more_wrap #portpolio_wrap #port3 .palette li:nth-child(3) span {
+    background-color: #999A9C; }
+  #pj_more_wrap #portpolio_wrap #port3 .palette li:nth-child(4) span {
+    background-color: #000000;
+    border: 1px solid #999A9C; }
 
 /*# sourceMappingURL=sub.css.map */

@@ -1,4 +1,4 @@
-
+  
 $(document).ready(function () {
   // 네비게이션
   var _gnb = $('#gnb');
@@ -15,7 +15,7 @@ $(document).ready(function () {
       $('#nav_box').stop().animate({right: '-750px'}, 500, function () {
         $(this).children('#gnb').css({visibility: 'hidden'});
       });
-      $(this).text('MENU').parent().removeClass('on').parent().css('z-index', '10000');
+      $(this).text('MENU').parent().removeClass('on').parent().css('z-index', '1000');
 
     } else {
       $('#nav_box').before('<div id="dim"></div>');
@@ -25,7 +25,7 @@ $(document).ready(function () {
       $(this).parent().stop().animate({right: 0}, 500, function () {
         _first.focus();
       });
-      $(this).text('EXIT').parent().addClass('on').parent().css('z-index', '1000');
+      $(this).text('EXIT').parent().addClass('on').parent().css('z-index', '10000');
     }
 
     $('#nav_box button').on('keydown', function (e) {
@@ -59,7 +59,7 @@ $(document).ready(function () {
     timer = setTimeout(function () {
       var scrollY = $(this).scrollTop();
       $('.fade').each(function () {
-        if (scrollY > $(this).offset().top - 900) $(this).addClass('on');
+        if (scrollY > $(this).offset().top - 500) $(this).addClass('on');
       });
     }, 50);
   });
