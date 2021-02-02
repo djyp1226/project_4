@@ -10,13 +10,95 @@ canvas {
   vertical-align: bottom;
   z-index: -1; }
 
-#contact_wrap #cnt1 .youth {
+#contact_wrap #indicator {
+  position: fixed;
+  top: 50px;
+  left: calc(50% - 150px);
+  width: 300px;
+  height: 80px;
+  z-index: 5000; }
+  #contact_wrap #indicator ul {
+    width: 100%; }
+  #contact_wrap #indicator ul li {
+    float: left; }
+    #contact_wrap #indicator ul li.on button .icon {
+      background: #fff;
+      width: 13px;
+      height: 13px;
+      box-shadow: 0px 0px 13px #fff; }
+    #contact_wrap #indicator ul li.on button .icon:before {
+      transform: scale(0.4); }
+    #contact_wrap #indicator ul li.on button .txt {
+      color: #fff;
+      opacity: 1; }
+    #contact_wrap #indicator ul li:nth-child(2) {
+      padding-top: 25px;
+      margin-left: 85px; }
+    #contact_wrap #indicator ul li:nth-child(3) {
+      padding-top: 8px;
+      margin-left: 75px; }
+    #contact_wrap #indicator ul li:nth-child(4) {
+      padding-top: 15px;
+      margin-left: 95px; }
+    #contact_wrap #indicator ul li button {
+      vertical-align: top; }
+      #contact_wrap #indicator ul li button .icon {
+        position: relative;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.5); }
+        #contact_wrap #indicator ul li button .icon:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          border-radius: 50%;
+          transition: transform 0.5s; }
+      #contact_wrap #indicator ul li button .txt {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 0.5s;
+        font-size: 15px; }
+#contact_wrap #contact_box {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; }
+  #contact_wrap #contact_box section {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    float: left; }
+  #contact_wrap #contact_box .youth .c1_txt li {
+    overflow: hidden;
+    position: relative;
+    height: 42px;
+    font-size: 20px;
+    line-height: 3.2; }
+    #contact_wrap #contact_box .youth .c1_txt li span {
+      display: inline-block; }
+    #contact_wrap #contact_box .youth .c1_txt li + li {
+      margin-top: 20px; }
+  #contact_wrap #contact_box .youth.on .c1_txt li span {
+    transform: translateY(0%);
+    animation: text_up 2s linear both; }
+  #contact_wrap #contact_box .youth.on .c1_txt li.ko span {
+    animation: text_up 1s linear both; }
+@keyframes text_up {
+  from {
+    transform: translate3d(0, 150%, 0); }
+  to {
+    transform: translate3d(0, 0, 0); } }
+#contact_wrap #cnt1 {
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   background-size: cover !important;
-  width: 100vw;
-  height: 100vh;
-  background-position: center;
+  background-position: top left;
   background-image: url("../images/contact/contact_bg.png"); }
   #contact_wrap #cnt1 .youth h1 {
     position: absolute;
@@ -34,98 +116,100 @@ canvas {
       background: #ffffff; }
   #contact_wrap #cnt1 .youth ul {
     display: none;
-    position: absolute;
+    position: relative;
     top: 500px;
     left: 150px; }
     #contact_wrap #cnt1 .youth ul.view {
       display: block; }
-  #contact_wrap #cnt1 .youth .c1_txt li {
-    overflow: hidden;
-    position: relative;
-    height: 42px;
-    font-size: 20px;
-    line-height: 3.2; }
-    #contact_wrap #cnt1 .youth .c1_txt li span {
-      display: inline-block; }
-    #contact_wrap #cnt1 .youth .c1_txt li + li {
-      margin-top: 20px; }
-#contact_wrap #cnt1 .youth.on h1::before {
-  width: 430px;
-  -webkit-transition: all 1s;
-  -moz-transition: all 1s;
-  -o-transition: all 1s;
-  transition: all 1s; }
-#contact_wrap #cnt1 .youth.on .c1_txt li span {
-  transform: translateY(0%);
-  animation: text_up 2s linear both; }
-#contact_wrap #cnt1 .youth.on .c1_txt li.ko span {
-  animation: text_up 1s linear both; }
-@keyframes text_up {
-  from {
-    transform: translate3d(0, 150%, 0); }
-  to {
-    transform: translate3d(0, 0, 0); } }
+  #contact_wrap #cnt1 .youth.on h1::before {
+    width: 430px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
 #contact_wrap #cnt2 {
-  width: 100vw;
-  height: 100vh;
+  -webkit-background-size: cover !important;
+  -moz-background-size: cover !important;
+  background-size: cover !important;
+  background-position: top left;
+  background-image: url("../images/contact/contact_bg.png"); }
+  #contact_wrap #cnt2 .youth ul {
+    display: none;
+    position: relative;
+    top: 500px;
+    left: 150px; }
+    #contact_wrap #cnt2 .youth ul.view {
+      display: block; }
+  #contact_wrap #cnt2 .youth h1 {
+    position: absolute;
+    top: calc(50% - 15px);
+    left: 80%;
+    font-size: 30px; }
+    #contact_wrap #cnt2 .youth h1::before {
+      content: "";
+      display: inline-block;
+      width: 430px;
+      height: 3px;
+      position: absolute;
+      top: 49%;
+      left: -240%;
+      background: #ffffff; }
+#contact_wrap #cnt3 {
   cursor: default;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   background-size: cover !important;
   background-position: bottom left;
   background-image: url("../images/contact/contact_bg_2.png"); }
-  #contact_wrap #cnt2 h1 {
+  #contact_wrap #cnt3 h1 {
     display: inline-block;
     font-size: 180px;
     padding-left: 300px;
     padding-top: 200px;
     line-height: 1.2; }
-  #contact_wrap #cnt2 .introduce {
+  #contact_wrap #cnt3 .introduce {
     display: inline-block;
     padding-left: 150px;
     height: 648px; }
-    #contact_wrap #cnt2 .introduce li {
+    #contact_wrap #cnt3 .introduce li {
       font-size: 25px;
       width: 800px;
       height: 180px;
       line-height: 180px; }
-      #contact_wrap #cnt2 .introduce li strong {
+      #contact_wrap #cnt3 .introduce li strong {
         display: inline-block;
         font-weight: 400;
         width: 300px;
         text-align: center; }
-      #contact_wrap #cnt2 .introduce li p {
+      #contact_wrap #cnt3 .introduce li p {
         display: inline-block;
         padding-left: 20px; }
-      #contact_wrap #cnt2 .introduce li + li {
+      #contact_wrap #cnt3 .introduce li + li {
         border-top: 1px solid #999A9C; }
-#contact_wrap #cnt3 {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
+#contact_wrap #cnt4 {
   cursor: default;
   -webkit-background-size: cover !important;
   -moz-background-size: cover !important;
   background-size: cover !important;
   background-position: top left;
   background-image: url("../images/contact/contact_bg_3.png"); }
-  #contact_wrap #cnt3 h2 {
+  #contact_wrap #cnt4 h2 {
     padding-top: 150px;
     margin-left: 300px;
     font-size: 120px; }
-  #contact_wrap #cnt3 .skill_box {
+  #contact_wrap #cnt4 .skill_box {
     margin-left: 150px;
     margin-top: 100px; }
-    #contact_wrap #cnt3 .skill_box li {
+    #contact_wrap #cnt4 .skill_box li {
       display: inline-block;
       text-align: center;
       height: 85px;
       line-height: 80px;
       position: relative; }
-      #contact_wrap #cnt3 .skill_box li strong {
+      #contact_wrap #cnt4 .skill_box li strong {
         display: inline-block;
         text-align: center; }
-      #contact_wrap #cnt3 .skill_box li p {
+      #contact_wrap #cnt4 .skill_box li p {
         display: inline-block;
         font-weight: 500;
         font-size: 80px;
@@ -133,35 +217,34 @@ canvas {
         position: absolute;
         top: 5px;
         left: 0; }
-      #contact_wrap #cnt3 .skill_box li:hover strong, #contact_wrap #cnt3 .skill_box li:focus strong {
+      #contact_wrap #cnt4 .skill_box li:hover strong, #contact_wrap #cnt4 .skill_box li:focus strong {
         color: rgba(255, 255, 255, 0.2);
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s; }
-      #contact_wrap #cnt3 .skill_box li:hover p, #contact_wrap #cnt3 .skill_box li:focus p {
+      #contact_wrap #cnt4 .skill_box li:hover p, #contact_wrap #cnt4 .skill_box li:focus p {
         color: #ffffff;
         -webkit-transition: all 0.3s;
         -moz-transition: all 0.3s;
         -o-transition: all 0.3s;
         transition: all 0.3s; }
-    #contact_wrap #cnt3 .skill_box .skill_top {
+    #contact_wrap #cnt4 .skill_box .skill_top {
       width: 400px; }
-      #contact_wrap #cnt3 .skill_box .skill_top p {
+      #contact_wrap #cnt4 .skill_box .skill_top p {
         width: 400px; }
-    #contact_wrap #cnt3 .skill_box .skill_btm {
+    #contact_wrap #cnt4 .skill_box .skill_btm {
       width: 320px;
       margin-top: 80px; }
-      #contact_wrap #cnt3 .skill_box .skill_btm p {
+      #contact_wrap #cnt4 .skill_box .skill_btm p {
         width: 320px; }
-  #contact_wrap #cnt3 .stream {
-    width: 100vw; }
-    #contact_wrap #cnt3 .stream h3 {
+  #contact_wrap #cnt4 .stream {
+    width: 1920px;
+    overflow: hidden; }
+    #contact_wrap #cnt4 .stream h3 {
       display: inline-block;
       font-size: 80px;
-      position: absolute;
-      bottom: 0px;
-      left: 0;
+      margin-top: 180px;
       white-space: nowrap;
       height: 150px;
       line-height: 150px;
@@ -171,7 +254,7 @@ canvas {
     transform: translateX(20%); }
   to {
     transform: translateX(-100%); } }
-    #contact_wrap #cnt3 .stream::after {
+    #contact_wrap #cnt4 .stream::after {
       content: "";
       background: #ffffff;
       width: 100vw;
@@ -640,7 +723,7 @@ canvas {
     width: auto;
     position: absolute;
     top: 250px;
-    left: calc(50% - 421.5px); }
+    left: calc(50% - 348.5px); }
   #pj_more_wrap #portpolio_wrap #port2 {
     margin-top: 200px; }
   #pj_more_wrap #portpolio_wrap #port3 .font li img {

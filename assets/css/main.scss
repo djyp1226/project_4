@@ -71,7 +71,7 @@
     .center{
         display: inline-block;
         text-align: center; position: relative;
-        width: 1500px; height: 400px; top: -70%; left: 50px;
+        width: 1500px; height: 400px; top: -595px; left: 50px;
         
         strong{
             display: inline-block;
@@ -132,7 +132,7 @@
             70%{top: 0px; left: 80px;}
             80%{top: 95px; left: 15px;}
             90%{top: 195px; left: 125px;}
-            100%{top: 180px; left: 125px;}
+            100%{top: 270px; left: 470px;}
         } 
         @keyframes moon_ani{
             0%{top: 50px; left: 1210px;}
@@ -145,7 +145,7 @@
             70%{top: 270px; left: 470px;}
             80%{top: 255px; left: 805px;}
             90%{top: 270px; left: 950px;}
-            100%{top: 85px; left: 1210px;}
+            100%{top: 50px; left: 1210px;}
         } 
     }   
 

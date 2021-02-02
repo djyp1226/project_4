@@ -1,29 +1,78 @@
 $(document).ready(function () {
-  var _youth = $('#contact_wrap #cnt1 .youth div');
-  // circle fix 변수 선언
   var timer = 0;
-  var circle = $('#pj_more_wrap .gra_circle');
+    var $win = $(window);
+    var $menu = $('#wrap #contact_wrap #indicator ul li');
+    var $cntWrap = $('#wrap #contact_wrap #contact_box');
+    var tgIdx = 0; 
+    var total = $cntWrap.children().size();
+    var winWidth; 
+    var timerResize = 0;
+    var timerWheel = 0;
 
+    $menu.eq(0).addClass('on');
+    $win.on('resize', function () {
+        clearTimeout(timerResize);
+        timerResize = setTimeout(function () {
+            winWidth = $win.width();
+            $cntWrap.css('width', winWidth * total).children().css('width', winWidth);
+        }, 100);
+    });
+    $win.trigger('resize');
+
+    $menu.children().on('click', function (e) {
+        e.preventDefault();
+
+        //3-1) 현재 애니메이트(.cnt_wrap) 중이면 함수 강제 종료
+        if ( $cntWrap.is(':animated') ) return false;
+        tgIdx = $(this).parent().index(); //인디케이터 li의 인덱스번호
+        console.log(tgIdx);
+        //3-2) 클릭한 인디케이터가 활성화
+        $(this).parent().addClass('on').siblings().removeClass('on');
+        //3-3) 애니메이트(.cnt_wrap)
+        $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
+    });
+
+    $cntWrap.on('mousewheel DOMMouseScroll', function (e) {
+        clearTimeout(timerWheel);
+
+        timerWheel = setTimeout(function () {
+            if ( $cntWrap.is(':animated') ) return false;
+
+            var delta = e.originalEvent.wheelDelta || e.originalEvent.detail * -1;
+            if (delta < 0  && tgIdx < total - 1) {
+                tgIdx++;
+            } else if (delta > 0 && tgIdx > 0) {
+                tgIdx--;
+            }
+            $menu.eq(tgIdx).addClass('on').siblings().removeClass('on');
+            $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
+        }, 200);
+    });
+    $(document).on('keydown', function (e) {
+        var key = e.keyCode;
+        var tg = e.target;
+        if ( $cntWrap.is(':animated') ) return false;
+        if ( (key === 39 || key === 40) && tgIdx < total - 1 ) tgIdx++;
+        else if ( (key === 37 || key === 38) && tgIdx > 0 ) tgIdx--;
+        else if ( (key === 13 || key === 32) && $(tg).is('[data-href]') ) {
+            tgIdx = $(tg).parent().index();
+        }
+        $menu.eq(tgIdx).addClass('on').siblings().removeClass('on');
+        $cntWrap.stop().animate({marginLeft: tgIdx * winWidth * -1}, 700);
+    });
+
+  var _youth = $('#contact_wrap #cnt1 .youth');
+  // circle fix 변수 선언
+
+  var circle = $('#pj_more_wrap .gra_circle');
   // contact 선그리기
-  _youth.parent().addClass('on');
+  _youth.addClass('on');
 
   // contact 한영 변환 - html로 태그 바꿔주기
   $(window).on('scroll', function () {
     var scrollY = $(this).scrollTop();
 
-    // var numCnt = $('.cnt').size();
-    // var widSec = 200*numCnt;
-    // var widTotal = widSec+600;
-    // $('#contact_wrap').width(widTotal);
-    // $('contact_wrap').height(widSec);		
-    // $('html, body').animate({scrollTop:widSec}, 2000);
-    
-    // $(window).on('scroll',function(){
-    //   var scroll = $(this).scrollTop();			
-    //   $('#contact_wrap').stop().animate({left: -scroll}, 600);
-    // });
-
-    if (scrollY > 1) _youth.find('.c1_txt').removeClass('view').next().addClass('view');
+    // if (scrollY > 1) _youth.find('.c1_txt').removeClass('view').next().addClass('view');
 
     //circle fix
     clearTimeout(timer);
@@ -113,7 +162,6 @@ $(document).ready(function () {
   }
 
   // project main
-
   $('#project_wrap #pj_main .pj_list ul').on({
     'mouseenter focusin': function () {
       $(this).addClass('flip');

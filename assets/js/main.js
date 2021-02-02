@@ -29,7 +29,7 @@ $(document).ready(function () {
         }
     });
     //5) 글자를 표시하기 전의 지연 시간(ms)
-    var delayStart = 10;
+    var delayStart = 1000;
     //6) 타이핑 속도(ms)
     var speed = 300;
     //7) 글자들을 보이지 않게 설정한 다음 한 글자씩 화면에 표시

@@ -22,9 +22,7 @@ $(document).ready(function () {
       _dim = $('#dim');
       _dim.stop().fadeIn('fast');
       _gnb.css({visibility: 'visible'});
-      $(this).parent().stop().animate({right: 0}, 500, function () {
-        _first.focus();
-      });
+      $(this).parent().stop().animate({right: 0}, 500);
       $(this).text('EXIT').parent().addClass('on').parent().css('z-index', '10000');
     }
 

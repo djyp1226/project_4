@@ -97,7 +97,7 @@
     position: relative;
     width: 1500px;
     height: 400px;
-    top: -70%;
+    top: -595px;
     left: 50px; }
     #index .center strong {
       display: inline-block;
@@ -211,8 +211,8 @@
     top: 195px;
     left: 125px; }
   100% {
-    top: 180px;
-    left: 125px; } }
+    top: 270px;
+    left: 470px; } }
 @keyframes moon_ani {
   0% {
     top: 50px;
@@ -245,7 +245,7 @@
     top: 270px;
     left: 950px; }
   100% {
-    top: 85px;
+    top: 50px;
     left: 1210px; } }
   #index .right {
     writing-mode: vertical-rl;
